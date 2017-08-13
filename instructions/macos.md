@@ -108,6 +108,9 @@ This stuff needs done manually.
     1. Check: "show the date of the week"
     1. Check: "show the date"
 
+1. `System Preferences->General`
+    1. `Default Web Browser`: Google Chrome
+
 1. `System Preferences->Notifications`
     1. Do this after setting up `chrome` and `messages`
     1. Select each item in the menu and choose `none` for alert style. Optionally turn off all check boxes.
