@@ -13,22 +13,23 @@
 - set_fact:
     dotfiles_branch: "master"
 
-- set_fact:
-    dotfiles_branch: "linuxdesktop"
-  when: "'patternbox' in group_names and ansible_architecture == 'x86_64'"
+# - set_fact:
+#     dotfiles_branch: "linuxdesktop"
+#   when: "'patternbox' in group_names and ansible_architecture == 'x86_64'"
+# 
+# - set_fact:
+#     dotfiles_branch: "server"
+#   when: "'ubuntuservers' in group_names" 
+# 
+# - set_fact:
+#     dotfiles_branch: "macos"
+#   when: "ansible_os_family == 'Darwin'"
+# 
+# - set_fact:
+#     dotfiles_branch: "pine64"
+#   when: "'pine64' in group_names and ansible_architecture == 'armv7l'" 
 
-- set_fact:
-    dotfiles_branch: "server"
-  when: "'ubuntuservers' in group_names" 
-
-- set_fact:
-    dotfiles_branch: "macos"
-  when: "ansible_os_family == 'Darwin'"
-
-- set_fact:
-    dotfiles_branch: "pine64"
-  when: "'pine64' in group_names and ansible_architecture == 'armv7l'" 
-
+# this always deploys master now
 - name: Deploy Dotfiles, based on OS, to Specified Users 
   git: 
     repo: git@bitbucket.org:robbintt/dotfiles.git 
