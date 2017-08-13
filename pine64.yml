@@ -1,0 +1,20 @@
+---
+# ansible dependencies are installed manually via apt, pip, and virtualenv
+
+
+- name: apply desktop configurations
+  hosts: pine64
+  become: yes
+
+  roles:
+    - pip
+    - sudo
+    - common
+    - ubuntudesktop
+
+- name: apply dotfiles to admin user
+  hosts: pine64
+
+  roles:
+    - dotfiles
+    - ubuntudotfiles

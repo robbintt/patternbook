@@ -1,0 +1,33 @@
+---
+- name: Install Cask 
+  homebrew_tap: name=caskroom/cask
+
+# homebrew should be updated once before running this
+# inkscape requires xquartz
+- name: Install Cask Packages
+  homebrew_cask: name={{ item }} state=present update_homebrew=no
+  with_items:
+    - iterm2
+    - spectacle
+    - flux
+    - tunnelblick
+    - google-chrome
+    - firefox
+    - xquartz
+    - inkscape
+    - gimp      
+    - vlc    
+    - steam
+    - sublime-text
+    - slack
+    - karabiner-elements
+    - teamviewer
+    - solvespace
+    - openscad
+    - transmission 
+    - keepassx
+    - postman
+    - sparkleshare
+    - docker
+    - java
+    - macdown

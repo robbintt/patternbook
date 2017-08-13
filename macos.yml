@@ -1,0 +1,29 @@
+---
+
+# general configuration, note that this runs locally as whatever user runs it
+- name: apply common configuration to all nodes
+  hosts: macosx
+#  remote_user: root
+
+  roles:
+    - homebrew
+    - homebrewcask
+    - homebrewtap
+    - dotfiles
+    - nodejs
+    - pip
+
+
+# THIS SECTION NEEDS RUN AGAIN WHENEVER macos IS UPDATED???
+# (observed to be reset on update december 2016)
+# The following section requires:
+# 1. changes to System: `csrutil disable`
+# 2. sudo password: `--ask-become-pass` when running the playbook (see macosx.sh)
+#
+# This section is only uncommented when csrutil is disabled
+#- name: Apply System configuration. This REQUIRES `csrutil disable`.
+#  hosts: macosx
+#  remote_user: root
+#
+#  roles:
+#    - osx-customizer

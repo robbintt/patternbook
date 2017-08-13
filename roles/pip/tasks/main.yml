@@ -1,0 +1,10 @@
+# FUTURE: default directory ~/virtualenvs/ and my regular virtualenvs should be maintained here
+
+- name: Install Python Packages - may fail if .bashrc has PIP_REQUIRE_VIRTUALENV set to true
+  pip: name={{ item }}
+  with_items:
+    - pip
+    - virtualenv
+
+
+

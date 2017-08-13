@@ -1,0 +1,13 @@
+
+- name: Remove finder from the osx app switcher
+  become: true
+  become_method: sudo
+  become_user: root
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: staff
+    mode: 0644
+  with_items:
+    - { src: 'templates/Info.plist', dest: '/System/Library/CoreServices/Finder.app/Contents/Info.plist' }

@@ -1,0 +1,77 @@
+---
+# if you are installing locally, this will install the dotfiles to your local directory
+# remotely this works fine... this is probably WONTFIX because it's a pretty special case
+
+# file stored in vault
+- name: Add Dotfiles SSH Deploy Keys
+  copy: 
+    src: "dotfiles_deploy_rsa"
+    dest: "~/.ssh/dotfiles_deploy_rsa"
+    mode: 0600
+  remote_user: "{{ dotfilesuser }}"
+
+- set_fact:
+    dotfiles_branch: "master"
+
+- set_fact:
+    dotfiles_branch: "linuxdesktop"
+  when: "'patternbox' in group_names and ansible_architecture == 'x86_64'"
+
+- set_fact:
+    dotfiles_branch: "server"
+  when: "'ubuntuservers' in group_names" 
+
+- set_fact:
+    dotfiles_branch: "macos"
+  when: "ansible_os_family == 'Darwin'"
+
+- set_fact:
+    dotfiles_branch: "pine64"
+  when: "'pine64' in group_names and ansible_architecture == 'armv7l'" 
+
+- name: Deploy Dotfiles, based on OS, to Specified Users 
+  git: 
+    repo: git@bitbucket.org:robbintt/dotfiles.git 
+    dest: ~/.dotfiles 
+    key_file: ~/.ssh/dotfiles_deploy_rsa 
+    update: yes 
+    recursive: yes
+    version: "{{ dotfiles_branch }}"
+    accept_hostkey: yes
+  remote_user: "{{ dotfilesuser }}"
+
+- name: Generate any dotfiles directories
+  file:
+    state: directory
+    mode: 0775
+    path: "{{ item }}"
+  with_items:
+    - "~/.irssi"
+  remote_user: "{{ dotfilesuser }}"
+
+
+- name: Force symlinks
+  file:
+    state: link
+    force: yes
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - { src: '~/.dotfiles/.bashrc', dest: '~/.bashrc' }
+    - { src: '~/.dotfiles/.bash_profile', dest: '~/.bash_profile' }
+    - { src: '~/.dotfiles/.bash_aliases', dest: '~/.bash_aliases' }
+    - { src: '~/.dotfiles/.inputrc', dest: '~/.inputrc' }
+    - { src: '~/.dotfiles/.Xmodmap', dest: '~/.Xmodmap' }
+    - { src: '~/.dotfiles/.vimrc', dest: '~/.vimrc' }
+    - { src: '~/.dotfiles/.emacs.d', dest: '~/.emacs.d' }
+    - { src: '~/.dotfiles/.spacemacs.d', dest: '~/.spacemacs.d' }
+    - { src: '~/.dotfiles/.psqlrc', dest: '~/.psqlrc' }
+    - { src: '~/.dotfiles/.nethackrc', dest: '~/.nethackrc' }
+    - { src: '~/.dotfiles/.gitconfig', dest: '~/.gitconfig' }
+    - { src: '~/.dotfiles/.tmux.conf', dest: '~/.tmux.conf' }
+    - { src: '~/.dotfiles/.ssh/config', dest: '~/.ssh/config' }
+    - { src: '~/.dotfiles/.irssi/robbintt', dest: '~/.irssi/robbintt' }
+    - { src: '~/.dotfiles/.irssi/nebiz', dest: '~/.irssi/nebiz' }
+    - { src: '~/.dotfiles/.irssi/pluto_rises', dest: '~/.irssi/pluto_rises' }
+    - { src: '~/.dotfiles/.irssi/solarized.theme', dest: '~/.irssi/solarized.theme' }
+  remote_user: "{{ dotfilesuser }}"

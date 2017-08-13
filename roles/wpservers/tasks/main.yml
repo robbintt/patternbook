@@ -1,0 +1,35 @@
+
+- name: Install PHP dependencies
+  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
+  with_items:
+    - libapache2-mod-php
+    - php-mysql
+    - php-mcrypt
+    - php-curl
+    - php-xml
+    - php-xmlrpc
+    - php-mbstring
+    - php-gd
+  notify: restart apache2 
+  
+    
+# note - to use wp command, you must `become` www-data
+# is become similar escalation to `sudo -u www-data whoami`?
+# note: 
+- name: Install wp-cli and alias to 'wp' 
+  get_url: 
+    url: https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar 
+    dest: /usr/local/bin/wp 
+    owner: www-data
+    group: www-data
+    force: yes 
+    mode: 0775
+
+
+# deprecated as installs are currently manual with wp-cli
+# - name: Download WordPress <= https://wordpress.org/latest.tar.gz 
+#   get_url: 
+#       url: https://wordpress.org/latest.tar.gz 
+#       dest: /tmp/wordpress.tar.gz 
+#       force: yes
+

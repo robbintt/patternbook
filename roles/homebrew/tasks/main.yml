@@ -1,0 +1,55 @@
+---
+- name: update homebrew and upgrade all homebrew packages
+  homebrew: upgrade_all=yes update_homebrew=yes
+
+- name: install CLI tools - needs non-cli tools split off
+  homebrew: name={{ item }} state=present update_homebrew=no
+  with_items:
+    - git
+    - irssi
+    - autoconf
+    - colordiff
+    - coreutils
+    - findutils
+    - dos2unix
+    - curl
+    - flashrom
+    - pwgen
+    - python
+    - python3
+    - readline
+    - rlwrap
+    - sqlite
+    - tmux
+    - tree
+    - ranger
+    - unrar
+    - htop
+    - vim
+    - emacs
+    - vnstat
+    - iftop
+    - wget
+    - xonsh
+    - imagemagick
+    - md5sha1sum
+    - mit-scheme
+    - node
+    - postgresql
+    - bash
+    - lftp
+    - nmap
+    - bash-completion2
+    - nethack
+
+    # used for rust
+    - portaudio
+    - pkg-config
+    - sdl2
+    - nanomsg
+
+    # can be used for local dev of python... when is it needed?
+    - uwsgi
+
+  when: ansible_os_family == 'Darwin'
+

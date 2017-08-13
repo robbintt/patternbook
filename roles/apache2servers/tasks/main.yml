@@ -1,0 +1,40 @@
+
+- name: Install Apache2
+  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
+  with_items:
+    - apache2
+
+
+- name: Add ServerName to apache2.conf
+  lineinfile:
+    dest: /etc/apache2/apache2.conf
+    regexp: "ServerName.*"
+    line: "ServerName {{ ansible_default_ipv4.address }}"
+  notify: restart apache2
+
+
+- name: Enable apache mod_rewrite
+  apache2_module:
+    state: present
+    name: rewrite
+  notify: restart apache2
+
+
+- name: Deploy Example Apache2 Configuration
+  template:
+    src: "www.example.com.conf.j2"
+    dest: "/etc/apache2/sites-available/www.example.com.conf"
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart apache2
+
+
+# /var/www also needs www-data ownership?
+- name: Set up /var/www/websites with www-data ownership
+  file: 
+    path: /var/www/websites
+    state: directory
+    owner: www-data
+    group: www-data
+    mode: 0775

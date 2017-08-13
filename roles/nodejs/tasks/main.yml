@@ -1,0 +1,13 @@
+---
+
+- name: Install nodejs packages for roots/sage development
+  npm: 
+    name: "{{ item }}"
+    global: yes
+  with_items:
+    - gulp
+    - bower
+    # these items should not go on servers... but they should go on local machines
+    # for more info see the assets files and especially the Makefile in the pybay (2017) repo commit: a9559a7e30e0f21bf5af041a4cc1da0f7db73013
+    #- less
+    #- uglifyjs

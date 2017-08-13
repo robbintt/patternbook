@@ -1,0 +1,45 @@
+---
+# requires: dotfiles role must have deployed these files to ~/.dotfiles
+
+- name: Generate any dotfiles directories
+  file:
+    state: directory
+    mode: 0775
+    path: "{{ item }}"
+  with_items:
+    - "~/.config/xfce4/terminal"
+  remote_user: "{{ dotfilesuser }}"
+
+- name: register the ~/.config/i3 filetype
+  stat: path="~/.config/i3"
+  register: i3symlink
+  remote_user: "{{ dotfilesuser }}"
+
+- name: if necessary remove i3 folder, it should be a symlink
+  file: path="~/.config/i3" state=absent
+  when: i3symlink.stat.isdir is defined and i3symlink.stat.isdir
+  remote_user: "{{ dotfilesuser }}"
+
+
+- name: register the local fonts folder filetype
+  stat: path="~/.fonts"
+  register: fontsymlink
+  remote_user: "{{ dotfilesuser }}"
+
+- name: if necessary remove local fonts folder, it should be a symlink
+  file: path="~/.fonts" state=absent
+  when: fontsymlink.stat.isdir is defined and fontsymlink.stat.isdir
+  remote_user: "{{ dotfilesuser }}"
+
+
+- name: Force symlinks
+  file:
+    state: link
+    force: yes
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - { src: '~/.dotfiles/.config/i3', dest: '~/.config/i3' }
+    - { src: '~/.dotfiles/fonts', dest: '~/.fonts' }
+    - { src: '~/.dotfiles/.config/xfce4/terminal/terminalrc', dest: '~/.config/xfce4/terminal/terminalrc' }
+  remote_user: "{{ dotfilesuser }}"

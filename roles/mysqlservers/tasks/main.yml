@@ -1,0 +1,26 @@
+---
+# This playbook will install mysql and create db user and give permissions.
+# TRENT: Not totally implemented yet.
+# From: https://github.com/ansible/ansible-examples/blob/master/lamp_simple/roles/db/tasks/main.yml
+
+
+# Note: The new mysql security policy means only root can use mysql at their root user
+- name: Install Mysql Package and Ansible management requirements
+  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
+  with_items:
+    - mysql-server
+    - mysql-client
+    - python-mysqldb
+
+
+# Perform equivalent of mysql_secure_installation
+# Source: https://injustfiveminutes.com/2014/08/25/ansible-mysql_secure_installation-playbook/
+
+- name: delete anonymous MySQL server user for the ansible_hostname
+  action: mysql_user user="" host={{ ansible_hostname }} state=absent
+         
+- name: delete anonymous MySQL server user for localhost
+  action: mysql_user user="" state=absent
+         
+- name: remove the MySQL test database
+  action: mysql_db db=test state=absent

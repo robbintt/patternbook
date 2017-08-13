@@ -1,0 +1,38 @@
+# alias IP addresses below for readability and expandability
+# add IP addresses or hostnames as necessary
+[production]
+# one server
+a.b.c.d
+# another sever
+a.b.c.d
+
+
+[vncrelay]
+a.b.c.d
+
+# localhost aliases
+[macosx]
+localhost
+
+[patternbox]
+localhost
+
+[pine64]
+localhost
+
+
+# groups defined below in terms of aliases
+[ubuntuservers:children]
+production
+
+[apache2servers:children]
+production
+
+[nodejs:children]
+production
+
+[wpservers:children]
+production
+
+[mysqlservers:children]
+production

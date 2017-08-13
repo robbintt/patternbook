@@ -1,0 +1,12 @@
+
+- name: install oracle java
+  apt_repository:
+    repo: "ppa:webupd8team/java"
+    update_cache: yes
+
+- name: Install Oracle Java 8
+  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
+  with_items:
+    - oracle-java8-installer
+
+

@@ -1,0 +1,26 @@
+#
+# www.example.com (/etc/apache2/sites-available/www.example.com)
+#
+<Virtualhost *:80>
+	ServerAdmin 	webmaster@tauinformatics.com
+	ServerName	    www.example.com
+    # ServerAlias     example.com	
+
+	# Indexes + Directory Root.
+	DirectoryIndex index.html index.php index.htm
+	DocumentRoot /var/www/www.example.com/public_html/
+
+    <Directory /var/www/www.example.com/public_html/>
+        AllowOverride All
+    </Directory>
+
+	# CGI Directory
+	ScriptAlias /cgi-bin/ /var/www/www.example.com/public_html/cgi-bin/
+	<Location /cgi-bin>
+		Options +ExecCGI
+	</Location>
+
+	# Logfiles
+	ErrorLog /var/www/www.example.com/public_html/logs/error.log
+	CustomLog /var/www/www.example.com/public_html/logs/access.log combined
+</VirtualHost>

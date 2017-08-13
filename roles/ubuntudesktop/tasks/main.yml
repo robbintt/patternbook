@@ -1,0 +1,69 @@
+
+# Install desktop packages in apt
+- name: Install Ubuntu Desktop Packages
+  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
+  with_items:
+    - i3
+    - feh
+    - dzen2 
+    - compton
+    - openvpn
+    - gimp
+    # it is unclear if sparkleshare has any unmet dependencies from the mess below
+    - sparkleshare
+    # for ubuntu exfat mounting
+    - exfat-fuse
+    - exfat-utils
+    - chromium-browser
+    - xfce4-terminal
+    - xdg-utils
+    - vlc
+    # note: this needed reconfigured, no settings were changed"sudo dpkg-reconfigure libdvd-pkg" 
+    # this is the default package name when selecting libdvdcss2 in apt (appears to be an alias)
+    - libdvd-pkg  
+    - nvidia-375
+    - redshift
+
+
+
+# it is unclear if sparkleshare has any unmet dependencies from the mess below
+# Install SparkleShare dependencies from: https://github.com/hbons/SparkleShare/blob/master/SparkleShare/Linux/README.md
+#- name: Install Ubuntu Desktop Packages
+#  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
+#  with_items:
+#    - desktop-file-utils
+#    - git
+#    - gtk-sharp3-gapi
+#    - intltool
+#    - libdbus-glib2.0-cil-dev
+#    - libgtk3.0-cil-dev
+#    - libsoup2.4-dev
+#    - libtool-bin
+#    # found this one but the -dev package is more generic
+#    - libwebkit2gtk-4.0-dev
+#    #- libwebkit2gtk-4.0-37
+#    # doesn't work
+#    #- libwebkit2gtk-4.0
+#    - mono-devel
+#    - mono-mcs
+#    - nant
+#    - xsltproc
+#    # additional packages
+#    - libnotify3.0-cil
+#    - libnotify0.4-cil
+
+
+- name: install handbrake ppa
+  apt_repository:
+    repo: "ppa:stebbins/handbrake-releases"
+    update_cache: yes
+    state: present
+
+- name: Install PPA packages
+  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
+  with_items:
+    - handbrake-gtk
+    - handbrake-cli
+    - ubuntu-restricted-extras  # codecs for handbrake
+
+

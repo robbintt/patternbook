@@ -1,0 +1,33 @@
+---
+# ansible dependencies are installed manually via apt, pip, and virtualenv
+
+
+- name: apply desktop configurations
+  hosts: patternbox
+  become: yes
+
+  roles:
+    - pip
+    - sudo
+    - common
+    - ubuntudesktop
+    - ubuntuchrome
+    - ubuntuxfluxgui
+    - yubico-u2frules
+
+
+- name: apply dotfiles to admin user
+  hosts: patternbox
+
+  roles:
+    - dotfiles
+    - ubuntudotfiles
+
+
+# this has to be done manually, it requires interactive terminal to accept a terminal oracle TOS
+#- name: install oracle java 8
+#  hosts: patternbox
+#  become: yes
+#
+#  roles:
+#    - ubuntuoraclejava

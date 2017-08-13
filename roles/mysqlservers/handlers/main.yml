@@ -1,0 +1,9 @@
+
+# "Handler to handle DB tier notifications" 
+# https://github.com/ansible/ansible-examples/blob/master/lamp_simple/roles/db/handlers/main.yml
+
+- name: restart mysql
+  service: name=mysqld state=restarted
+
+- name: restart iptables
+  service: name=iptables state=restarted

@@ -1,0 +1,19 @@
+
+- name: install google chrome ppa key
+  apt_key:
+    url: "https://dl-ssl.google.com/linux/linux_signing_key.pub"
+    state: present
+
+- name: install google chrome ppa
+  apt_repository:
+    repo: "deb [arch=amd64] https://dl.google.com/linux/chrome/deb/ stable main"
+    update_cache: yes
+    state: present
+    filename: google-chrome
+
+- name: Install PPA packages
+  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
+  with_items:
+    - google-chrome-stable
+
+

@@ -1,0 +1,9 @@
+
+- name: Deploy yubikey u2f rules
+  template:
+    src: "70-u2f.rules"
+    dest: "/etc/udev/rules.d/70-u2f.rules"
+    owner: root
+    group: root
+    mode: 0644
+

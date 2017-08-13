@@ -1,0 +1,6 @@
+  
+- name: Add to journalctl config
+  lineinfile: 
+    dest: /etc/systemd/journald.conf
+    line: "SystemMaxUse=100M" 
+

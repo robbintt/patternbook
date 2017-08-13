@@ -1,0 +1,14 @@
+
+- name: Add Admin User
+  user: name={{ my_admin_user }} shell=/bin/bash groups=sudo,www-data append=yes generate_ssh_key=yes
+
+- name: Add Admin User Public Keys from file
+  authorized_key: 
+    user: "{{ my_admin_user }}" 
+    key: "{{ item }}"
+    state: present
+    exclusive: no
+    manage_dir: yes
+  with_file:
+    - ../public_keys/key1.pub
+    - ../public_keys/key2.pub
