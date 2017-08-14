@@ -147,6 +147,7 @@ This stuff needs done manually.
         - delay until repeat: short
     1. Turn dock hiding on: `Command+Option+D`
     1. right click: `System Preferences->Trackpad`
+        - "Look up & data detectors" - off, this gesture is taken by the app 'middleclick'
         - Secondary click: click in bottom right corner
         - Tap to click: enable
         - Tracking speed, 6 of 10 (left to right)
