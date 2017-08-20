@@ -11,12 +11,20 @@ Ansible does not track these, so track them here.
 1. `common/files/dotfiles_deploy_rsa`
 
 
+### How to get hosts?
+
+Each shell script could use a separate hosts file or you could just use one, depending on the complexity. 
+
+Optional: you can specify the path to the hosts file in each shell script
+Optional: Symlink your hosts from files that aren't in this repo; no need to commit specific hosts files.
+Optional: add any hosts symlinks to gitignore.
+
+
 #### Todo Components
 
 
 ##### Urgent
 
-1. remove `hosts` from source control
 1. make sure no competing lines are in the sudoers role
 1. Review [Best Practices](http://docs.ansible.com/ansible/playbooks_best_practices.html)
 1. Move adminuser variable into a variables file in a vault file
@@ -39,7 +47,6 @@ Ansible does not track these, so track them here.
 - Rebuild ~/virtualenv virtualenvs automatically?
 - See about Ansible on Python 3
     - potentially remove the Python 2 raw installation on Ubuntu 16.04 LTS
-- could eventually supply hosts a different way than in the repository
 
 
 ##### Using Ansible Vault
