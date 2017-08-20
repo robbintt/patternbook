@@ -151,9 +151,11 @@ This stuff needs done manually.
         - Secondary click: click in bottom right corner
         - Tap to click: enable
         - Tracking speed, 6 of 10 (left to right)
-    1. turn guest user off: `System Preferences->Users and Groups`
-        - Turn guest user off
+    1. `System Preferences->Users and Groups`
+        - turn guest user off
         - This may be the default
+        - Choose your user, select itunes and choose the - button to delete it
+        - If you have installed steam, you must disable it from starting up here
     1. `Click battery->show percentage` (in the top bar)
     1. `System Preferences->Energy Saver`
         - Turn off `power nap` on both tabs: `battery` and `power adapter`
