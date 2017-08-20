@@ -32,3 +32,6 @@
     - java
     - macdown
     - middleclick
+    - virtualbox
+    - vagrant
+    - vagrant-manager
