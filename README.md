@@ -6,6 +6,7 @@ These playbooks all have supporting shell scripts that supply their arguments.
 ### dotfiles role is slightly busted and needs some one-time steps
 
 1. Must use deploy key with private repo to ensure it is available during deployment.
+    - Remove old deploy key for private dotfiles from git host and ansible repo
     - Generate new deploy key for private repo
     - Add deploy key to private repo and dotfiles role
     - Test new dotfiles deploy role locally (patternbox) before deploying across all servers
