@@ -113,6 +113,7 @@ This stuff needs done manually.
 
 1. `System Preferences->General`
     1. `Default Web Browser`: Google Chrome
+    1. uncheck: `Allow Handoff between this Mac and your iCloud devices`
 
 1. `System Preferences->Notifications`
     1. Do this after setting up `chrome` and `messages`
@@ -180,6 +181,7 @@ This stuff needs done manually.
         - uncheck: `Spotlight Suggestions`
         - uncheck: `Allow Spotlight Suggestions in Look up`
     1. `System Preferences->Displays` 
+        - check: `scaled` resolution, choose the one above `Default`
         - uncheck: `Automatically adjust brightness`
     1. `System Preferences->Sound` 
         - uncheck: `Show volume in menu bar`
