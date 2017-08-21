@@ -141,6 +141,7 @@ This stuff needs done manually.
     1.  Add desktops until there are `4 desktops`
     1.  Add `~/.dotfiles/Wallpapers` as a source
     1.  For each desktop, add a wallpaper
+    1. Select the `Screensaver` tab and choose `Never`
 1. Modify some System settings
     1. Responsive Keyboard: `System Preferences->Keyboard`
         - key repeat: fast
@@ -159,8 +160,19 @@ This stuff needs done manually.
         - This may be the default
     1. `Click battery->show percentage` (in the top bar)
     1. `System Preferences->Energy Saver`
-        - Turn off `power nap` on both tabs: `battery` and `power adapter`
-        - Turn off `wake for wifi network access`
+            
+        1. `Battery` tab:
+            - Slider: `Turn display off after 5 minutes`
+            - Turn on: `Put hard disks to sleep when possible`
+            - Turn off: `Slightly dim the display on battery power`
+            - Turn off: `Enable power nap`
+        1. `Power Adapter` tab:
+            - Slider: `Turn display off after 20 minutes`
+            - Turn off: `Prevent computer from sleeping automatically when display is off`
+            - Turn on: `Put hard disks to sleep when possible`
+            - Turn off: `Wake for Wi-Fi network access`
+            - Turn off: `Enable power nap`
+
     1. `System Preferences->Spotlight` - avoid search queries being sent to microsoft
         - uncheck: `Spotlight Suggestions`
         - uncheck: `Allow Spotlight Suggestions in Look up`
