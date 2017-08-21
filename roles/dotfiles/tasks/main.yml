@@ -5,39 +5,24 @@
 # file stored in vault
 - name: Add Dotfiles SSH Deploy Keys
   copy: 
-    src: "dotfiles_deploy_rsa"
-    dest: "~/.ssh/dotfiles_deploy_rsa"
+    src: "private_repo_deploy_key"
+    dest: "~/.ssh/private_repo_deploy_key"
     mode: 0600
   remote_user: "{{ dotfilesuser }}"
 
 - set_fact:
     dotfiles_branch: "master"
 
-# - set_fact:
-#     dotfiles_branch: "linuxdesktop"
-#   when: "'patternbox' in group_names and ansible_architecture == 'x86_64'"
-# 
-# - set_fact:
-#     dotfiles_branch: "server"
-#   when: "'ubuntuservers' in group_names" 
-# 
-# - set_fact:
-#     dotfiles_branch: "macos"
-#   when: "ansible_os_family == 'Darwin'"
-# 
-# - set_fact:
-#     dotfiles_branch: "pine64"
-#   when: "'pine64' in group_names and ansible_architecture == 'armv7l'" 
-
-# this always deploys master now
+# this recursively deploys the private repo
+# QUESTION: Does this task use key_file for recursively deployed subrepositories?
 - name: Deploy Dotfiles, based on OS, to Specified Users 
   git: 
-    repo: git@bitbucket.org:robbintt/dotfiles.git 
+    repo: git@github.com:robbintt/dotfiles.git 
     dest: ~/.dotfiles 
-    key_file: ~/.ssh/dotfiles_deploy_rsa 
+    key_file: ~/.ssh/private_repo_deploy_key
     update: yes 
     recursive: yes
-    version: "{{ dotfiles_branch }}"
+    version: master
     accept_hostkey: yes
   remote_user: "{{ dotfilesuser }}"
 
