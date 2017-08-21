@@ -76,7 +76,7 @@ This installation guide begins with a mac which has already been signed out of `
 
 This stuff needs done manually.
 
-1. Open `safari` and go to `File->Preferences...`
+1. Open `safari` and go to `Safari->Preferences...`
     - tab: `General`
         - Safari opens with: `a new private window`
         - new windows open with: `Empty Page`
@@ -90,7 +90,8 @@ This stuff needs done manually.
     - tab: `Search` uncheck:
         - `include search engine suggestions`, 
         - `include Safari suggestions`, 
-        - `enable quick website search`, `preload top hit in background`, 
+        - `enable quick website search`, 
+        - `preload top hit in background`, 
         - `show favorites`
     - tab: `Security`
         - uncheck: `Allow WebGL`, `Allow Plug-ins`
@@ -133,7 +134,7 @@ This stuff needs done manually.
         - Set BASH shell location (for homebrew bash) in `Profiles->General->Command`: `/usr/local/bin/bash`
         - Test your version: `echo $BASH_VERSION`
     1. Update `iterm2` default profile
-        - Set font: `Droid Sans Mono 16`
+        - Set font: `Droid Sans Mono 14`
         - Import colors: `~/.dotfiles/.config/solarized_highcontrast_dark.itermcolors`
         - Once imported, select `solarized highcontrast dark` from the dropdown
         - `Command+Shift+.` - view hidden files in open/close/finder
