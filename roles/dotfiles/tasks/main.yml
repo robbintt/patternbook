@@ -13,8 +13,9 @@
 - set_fact:
     dotfiles_branch: "master"
 
-# this recursively deploys the private repo
-# QUESTION: Does this task use key_file for recursively deployed subrepositories?
+# this recursively deploys the `private` repository as well
+# NB: This deploy key must be on both dotfiles and any recursive subrepositories because 
+# it is used for auth to dotfiles as well.
 - name: Deploy Dotfiles, based on OS, to Specified Users 
   git: 
     repo: git@github.com:robbintt/dotfiles.git 
