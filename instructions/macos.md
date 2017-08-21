@@ -271,6 +271,10 @@ This isn't really necessary because most everything is currently installed with 
 
 ##### Manage the Dock
 
+1. Disable the dock (may need redone after update?)
+    - `defaults write com.apple.dock tilesize -int 1`
+    - `killall Dock`
+
 1. [Manage orientation and settings](https://github.com/ultimateboy/ansible.osx/blob/master/roles/ultimateboy.osxdefaults/tasks/dock.yml)
 1. [Even more dock settings](http://www.makeuseof.com/tag/customise-mac-os-x-dock-hidden-terminal-commands/)
 1. How do i manage apps in the dock?
