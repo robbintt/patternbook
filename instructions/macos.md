@@ -33,8 +33,10 @@ This installation guide begins with a mac which has already been signed out of `
     1. restart the computer entirely
 1. After Initial Setup
     1. Turn Location Services off!
+        - `System Preferences`->`Security & Privacy`->`General`
+            - Check: Require password `IMMEDIATELY` after sleep or screen saver begins
         - `System Preferences`->`Security & Privacy`->`Privacy`
-        - Uncheck `Enable Location Services`
+            - Uncheck `Enable Location Services`
     1. Add iCloud Account: `System preferences`->`iCloud`
         - May have been optionally added during setup
         - Check: `Contacts`
