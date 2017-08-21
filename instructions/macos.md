@@ -39,8 +39,8 @@ This installation guide begins with a mac which has already been signed out of `
             - Uncheck `Enable Location Services`
     1. Add iCloud Account: `System preferences`->`iCloud`
         - May have been optionally added during setup
-        - Check: `Contacts`
-        - Uncheck: `iCloud Drive`, `photos`, `calendars`, `mail`, `reminders`, `safari`, `notes`, `keychain`, `back to my mac`, `find my mac` 
+        - Check: `Contacts`, `keychain`
+        - Uncheck: `iCloud Drive`, `photos`, `calendars`, `mail`, `reminders`, `safari`, `notes`, `back to my mac`, `find my mac` 
     1. App: `messages`: 
         1. Make sure you are signed into your `apple account` on the laptop
         1. Make sure you have **enabled** your `iCloud account` on the laptop
