@@ -141,7 +141,7 @@ This stuff needs done manually.
     1.  Add desktops until there are `4 desktops`
     1.  Add `~/.dotfiles/Wallpapers` as a source
     1.  For each desktop, add a wallpaper
-    1. Select the `Screensaver` tab and choose `Never`
+    1.  Select the `Screensaver` tab and choose `Never`
 1. Modify some System settings
     1. Responsive Keyboard: `System Preferences->Keyboard`
         - key repeat: fast
