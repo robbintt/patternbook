@@ -22,13 +22,11 @@ Vagrant.configure("2") do |config|
     # https://www.vagrantup.com/docs/networking/private_network.html
     # https://www.vagrantup.com/docs/virtualbox/networking.html
     servers.vm.network :private_network, ip: "192.168.50.100"
-    # i did not end up using this
-    # instead i use the hosts file to specify the IP of the private_network machines I wish to configure
-    #servers.vm.provider :virtualbox do |v|
-    #  v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-    #  v.customize ["modifyvm", :id, "--memory", 512]
-    #  v.customize ["modifyvm", :id, "--name", "servers"]
-    #end
+    servers.vm.provider :virtualbox do |v|
+      v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      v.customize ["modifyvm", :id, "--memory", 512]
+      v.customize ["modifyvm", :id, "--name", "servers"]
+    end
     # provisioning with ansible:
     # http://docs.ansible.com/ansible/latest/guide_vagrant.html
     # https://www.vagrantup.com/docs/provisioning/ansible.html
