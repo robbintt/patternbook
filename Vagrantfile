@@ -36,12 +36,14 @@ Vagrant.configure("2") do |config|
     # note that this is unnecessary as we can put the local host into `hosts`
     # this keeps us from going to deep into this vagrant file, instead
     # simply using it to provision the host in virtualbox, not for maintenance...
-    servers.vm.provision "ansible" do |ansible|
-      ansible.verbose = "v"
-      ansible.playbook = "servers.yml"
-      ansible.ask_vault_pass = true
-      ansible.inventory_path = "hosts"
-    end
+    # i did not end up using this
+    # instead i use the hosts file to specify the IP of the private_network machines I wish to configure
+    #servers.vm.provision "ansible" do |ansible|
+    #  ansible.verbose = "v"
+    #  ansible.playbook = "servers.yml"
+    #  ansible.ask_vault_pass = true
+    #  ansible.inventory_path = "hosts"
+    #end
   end
 
   # another VM with a different: hostname, IP Address, and name
