@@ -1,7 +1,12 @@
 
-### Ansible Playbooks
+## Ansible Playbooks
 
 These playbooks all have supporting shell scripts that supply their arguments.
+
+
+### Enhance playbooks with ninite.com 
+
+From Kelly Albrink: [ninite.com](https://ninite.com/)
 
 ### dotfiles role is slightly busted and needs some one-time steps
 
