@@ -32,6 +32,7 @@
     - java
     - macdown
     - middleclick
+    - vmware-fusion
     - virtualbox
     - vagrant
     - vagrant-manager
