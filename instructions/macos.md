@@ -128,6 +128,9 @@ This stuff needs done manually.
     - `cd ~/.dotfiles/fonts/`
     - `open .`
     - in finder, doubleclick each font and choose `install font`
+1. Make home your finder default
+    - Open finder
+    - dropdown: `New finder windows show`:`<your home dir>`
 1. Manage iterm2
     1. Make `iterm2` the default terminal
         - Open `iTerm2`, choose file->"Make iTerm2 the default terminal"
