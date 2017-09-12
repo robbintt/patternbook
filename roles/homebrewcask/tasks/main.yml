@@ -25,7 +25,9 @@
     - solvespace
     - openscad
     - transmission 
+    # deprecate after testing keepassxc
     - keepassx
+    - keepassxc
     - postman
     - sparkleshare
     - docker

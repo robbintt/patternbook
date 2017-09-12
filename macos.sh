@@ -6,4 +6,5 @@
 # this is often set to prevent accidental global pip installs
 unset PIP_REQUIRE_VIRTUALENV
 
-ansible-playbook -i hosts macos.yml --ask-vault-pass -vvv --connection=local
+#ansible-playbook -i hosts macos.yml --ask-vault-pass -vvv --connection=local
+ansible-playbook -i hosts macos.yml --ask-vault-pass -v --connection=local
