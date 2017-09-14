@@ -118,6 +118,7 @@ This stuff needs done manually.
 1. `System Preferences->Notifications`
     1. Do this after setting up `chrome` and `messages`
     1. Select each item in the menu and choose `none` for alert style. Optionally turn off all check boxes.
+    1. Be sure to do this for `iterm` and `messages` - both are super annoying
 
 1. Add a better local hostname `apple menu->System Preferences->Sharing`
     1. Change the "Computer Name"
