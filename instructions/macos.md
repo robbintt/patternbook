@@ -68,7 +68,7 @@ This installation guide begins with a mac which has already been signed out of `
     - `ansible --version`
 1. Make: `~/monolith/`
     - `mkdir ~/monolith/
-    - `git clone git@bitbucket.org:robbintt/patternbook.git`
+    - `git clone git@github.com:robbintt/patternbook.git`
 1. With the `ansible virtualenv` activated, run the `macos.yml` playbook
 
 
