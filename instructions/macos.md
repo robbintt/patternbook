@@ -227,7 +227,9 @@ This stuff needs done manually.
         - Ensure sync features are right
         - Extensions: Freshstart, uBlock Origin, cVim
     - macdown
-        - `macdown->preferences->editor`: uncheck `Auto-increment numbering in ordered lists`
+        - `macdown->preferences->editor`: 
+            - check `insert spaces instead of tabs
+            - uncheck `Auto-increment numbering in ordered lists`
         
 
 
