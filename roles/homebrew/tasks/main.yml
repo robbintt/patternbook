@@ -41,6 +41,7 @@
     - nmap
     - bash-completion2
     - nethack
+    - gnupg
 
     # used for rust
     - portaudio

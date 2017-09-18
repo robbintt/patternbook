@@ -53,7 +53,7 @@ This installation guide begins with a mac which has already been signed out of `
 1. `Xcode Dev Tools`: Open `terminal` and type `xcode-select --install`
     - Apparently not strictly required for homebrew anymore
 1. Homebrew - used for `python->pip->ansible` toolchain & gen. pkg management
-    - install via one-liner at: [http://brew.sh](http://brew.sh)
+    - install via one-liner at: [https://brew.sh](https://brew.sh)
 1. `brew install python git`
 1. Set up ssh access to github and bitbucket
     - `ssh-keygen`; Add key to bitbucket and github
