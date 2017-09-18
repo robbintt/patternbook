@@ -61,7 +61,7 @@ This installation guide begins with a mac which has already been signed out of `
 1. Make: `~/virtualenvs/`
     - `pip2 install virtualenv`
     - `mkdir ~/virtualenvs`
-    - `git clone git@github.com:robbintt/pip.virtualenvs`
+    - `git clone git@github.com:robbintt/pip.requirements`
     - `virtualenv ansible`
     - `. ansible/bin/activate`
     - `pip install ansible`
