@@ -68,7 +68,7 @@ This installation guide begins with a mac which has already been signed out of `
     - `ansible --version`
 1. Make: `~/monolith/`
     - `mkdir ~/monolith/
-    - `git clone git@bitbucket.org:robbintt/patternbook.git`
+    - `git clone git@github.com:robbintt/patternbook.git`
 1. With the `ansible virtualenv` activated, run the `macos.yml` playbook
 
 
@@ -233,10 +233,7 @@ This stuff needs done manually.
     - macdown
         - `macdown->preferences->editor`: 
             - uncheck `Auto-increment numbering in ordered lists`
-            - check: `spaces instead of tabs`
-            - set: `line spacing: 2`
-        
-
+            - check `insert spaces instead of tabs`
 
 1. Unspecified `first-time configurations`
     - etc... this should just refer me to the install roles to simplify things...
