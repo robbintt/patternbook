@@ -228,7 +228,7 @@ This stuff needs done manually.
         - Extensions: Freshstart, uBlock Origin, cVim
     - macdown
         - `macdown->preferences->editor`: 
-            - check `insert spaces instead of tabs
+            - check `insert spaces instead of tabs`
             - uncheck `Auto-increment numbering in ordered lists`
         
 
