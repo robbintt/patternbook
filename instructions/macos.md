@@ -253,6 +253,8 @@ This stuff needs done manually.
     - Image Editor
     - Flycut
 1. Set up SparkleShare projects as needed
+1. Start necessary services like `postgresql` and `mysql`; maybe `emacs service` in the future
+    - Use `brew services list` to see available services.
 
 
 #### Future
