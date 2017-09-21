@@ -42,6 +42,7 @@
     - bash-completion2
     - nethack
     - gnupg
+    - mysql
 
     # used for rust
     - portaudio
