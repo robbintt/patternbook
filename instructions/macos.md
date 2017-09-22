@@ -234,6 +234,7 @@ This stuff needs done manually.
         - `macdown->preferences->editor`: 
             - uncheck `Auto-increment numbering in ordered lists`
             - check `insert spaces instead of tabs`
+            - check `scroll past end`
 
 1. Unspecified `first-time configurations`
     - etc... this should just refer me to the install roles to simplify things...
