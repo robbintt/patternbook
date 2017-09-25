@@ -43,6 +43,7 @@
     - nethack
     - gnupg
     - mysql
+    - gnu-sed
 
     # used for rust
     - portaudio
