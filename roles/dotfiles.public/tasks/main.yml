@@ -1,27 +1,16 @@
 ---
 # if you are installing locally, this will install the dotfiles to your local directory
-# remotely this works fine... this is probably WONTFIX because it's a pretty special case 
-# file stored in vault
-- name: Add Dotfiles SSH Deploy Keys
-  copy: 
-    src: "private_repo_deploy_key"
-    dest: "~/.ssh/private_repo_deploy_key"
-    mode: 0600
-  remote_user: "{{ dotfilesuser }}"
-
-- set_fact:
-    dotfiles_branch: "master"
+# remotely this works fine... this is probably WONTFIX because it's a pretty special case
 
 # this recursively deploys the `private` repository as well
 # NB: This deploy key must be on both dotfiles and any recursive subrepositories because 
 # it is used for auth to dotfiles as well.
 - name: Deploy Dotfiles, based on OS, to Specified Users 
   git: 
-    repo: git@github.com:robbintt/dotfiles.git 
+    repo: https://github.com/robbintt/dotfiles.git
     dest: ~/.dotfiles 
-    key_file: ~/.ssh/private_repo_deploy_key
     update: yes 
-    recursive: yes
+    recursive: no
     version: master
     accept_hostkey: yes
   remote_user: "{{ dotfilesuser }}"
