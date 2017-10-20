@@ -15,15 +15,6 @@
     accept_hostkey: yes
   remote_user: "{{ dotfilesuser }}"
 
-- name: Generate any dotfiles directories
-  file:
-    state: directory
-    mode: 0775
-    path: "{{ item }}"
-  with_items:
-    - "~/.irssi"
-  remote_user: "{{ dotfilesuser }}"
-
 
 - name: Force symlinks
   file:
@@ -45,5 +36,5 @@
     - { src: '~/.dotfiles/.gitconfig', dest: '~/.gitconfig' }
     - { src: '~/.dotfiles/.tmux.conf', dest: '~/.tmux.conf' }
     - { src: '~/.dotfiles/.ssh/config', dest: '~/.ssh/config' }
-    - { src: '~/.dotfiles/.irssi', dest: '~/.irssi' }
+    - { src: '~/.dotfiles/.irssi/', dest: '~/.irssi' }
   remote_user: "{{ dotfilesuser }}"
