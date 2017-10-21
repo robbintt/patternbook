@@ -268,6 +268,7 @@ Games that support the XBox 360 controller can also hook into this.
 2. Install ControllerMate
     - `brew cask install controllermate` 
     - optional: manual install from website (latest release?)
+    - Add your license key from your email history
 3. Add any configurations you need to controllermate
     - My configs should be in ~/.dotfiles/extra/
     - I modified a minecraft config from http://dig.ratbastards.org/post/29623068215/minecraft-on-the-mac-with-an-xbox-controller
