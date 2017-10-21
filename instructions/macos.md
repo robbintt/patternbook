@@ -258,6 +258,20 @@ This stuff needs done manually.
     - Use `brew services list` to see available services.
 
 
+##### XBox 360 Controller with keyboard and mouse emulation
+
+This is used for whatever, primarily minecraft.
+
+Games that support the XBox 360 controller can also hook into this.
+
+1. Install the driver manually from [https://github.com/360Controller/360Controller#installation](https://github.com/360Controller/360Controller#installation)
+2. Install ControllerMate
+    - `brew cask install controllermate` 
+    - optional: manual install from website (latest release?)
+3. Add any configurations you need to controllermate
+    - My configs should be in ~/.dotfiles/extra/
+    - I modified a minecraft config from http://dig.ratbastards.org/post/29623068215/minecraft-on-the-mac-with-an-xbox-controller
+
 #### Future
 
 1. Automatically manage dock. Remove everything, add the basics I end up with after a few weeks: [manage dock as a file](http://hints.macworld.com/article.php?story=20090523192819542)
