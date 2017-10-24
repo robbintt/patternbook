@@ -45,6 +45,7 @@
     - mysql
     - gnu-sed
     - telnet
+    - hg
 
     # used for rust
     - portaudio
