@@ -4,6 +4,7 @@
 These playbooks all have supporting shell scripts that supply their arguments.
 
 
+
 ### Enhance playbooks with ninite.com 
 
 From Kelly Albrink: [ninite.com](https://ninite.com/)
@@ -48,6 +49,8 @@ Optional: add any hosts symlinks to gitignore.
 
 
 ##### Future
+
+- Need to move the private section of the dotfiles into its own role so there isn't any code duplication.
 
 - pip role should regenerate virtualenvs for that device, if necessary
 - rebooter isn't working for some reason. The sleep command probably needs to be a shell...
