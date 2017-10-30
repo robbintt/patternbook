@@ -43,6 +43,7 @@
     - { src: '~/.dotfiles/.emacs.d', dest: '~/.emacs.d' }
     - { src: '~/.dotfiles/.spacemacs.d', dest: '~/.spacemacs.d' }
     - { src: '~/.dotfiles/.psqlrc', dest: '~/.psqlrc' }
+    - { src: '~/.dotfiles/.sqliterc', dest: '~/.sqliterc' }
     - { src: '~/.dotfiles/.nethackrc', dest: '~/.nethackrc' }
     - { src: '~/.dotfiles/.gitconfig', dest: '~/.gitconfig' }
     - { src: '~/.dotfiles/.tmux.conf', dest: '~/.tmux.conf' }
