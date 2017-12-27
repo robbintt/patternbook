@@ -6,6 +6,7 @@
   homebrew: name={{ item }} state=present update_homebrew=no
   with_items:
     - git
+    - git-lfs
     - irssi
     - autoconf
     - colordiff
@@ -46,6 +47,7 @@
     - gnu-sed
     - telnet
     - hg
+    - ffmpeg
 
     # used for rust
     - portaudio
