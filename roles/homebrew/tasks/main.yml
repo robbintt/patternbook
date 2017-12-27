@@ -48,6 +48,8 @@
     - telnet
     - hg
     - ffmpeg
+    - p7zip
+    - leiningen
 
     # used for rust
     - portaudio
@@ -57,8 +59,6 @@
 
     # can be used for local dev of python... when is it needed?
     - uwsgi
-
-    - p7zip
 
   when: ansible_os_family == 'Darwin'
 
