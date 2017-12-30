@@ -138,6 +138,7 @@ This stuff needs done manually.
     1. Use a modern bash shell
         - Set BASH shell location (for homebrew bash) in `Profiles->General->Command`: `/usr/local/bin/bash`
         - Test your version: `echo $BASH_VERSION`
+        - `preferences->appearance`: uncheck "show tab close buttons"
     1. Update `iterm2` default profile
         - Set font: `Droid Sans Mono 14`
         - Import colors: `~/.dotfiles/.config/solarized_highcontrast_dark.itermcolors`
