@@ -151,9 +151,15 @@ This stuff needs done manually.
     1.  For each desktop, add a wallpaper
     1.  Select the `Screensaver` tab and choose `Never`
 1. Modify some System settings
-    1. Responsive Keyboard: `System Preferences->Keyboard`
-        - key repeat: fast
-        - delay until repeat: short
+    1. Keyboard: `System Preferences->Keyboard`
+        1. Responsive Keyboard
+            - key repeat: fast
+            - delay until repeat: short
+        1. Text input settings (apple quotes and period insert OFF)
+            - uncheck `use smart quotes and dashes`
+            - uncheck: `add period with double-space`
+            - uncheck: `capitalize words automatically`
+            - uncheck: `correct spelling automatically`
     1. Turn dock hiding on: `Command+Option+D`
     1. right click: `System Preferences->Trackpad`
         - "Look up & data detectors" - off, this gesture is taken by the app 'middleclick'
