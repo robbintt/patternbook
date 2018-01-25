@@ -146,6 +146,8 @@ This stuff needs done manually.
         - `Command+Shift+.` - view hidden files in open/close/finder
         - `Command+Shift+G` - type a path in open/close/finder
         - `Preferences->Profiles->Window` - set `transparency` slider slightly above zero. 
+    1. `preferences->advanced1`
+        - `Tabs: eliminate close button` set to `Yes`
 1. Add a wallpaper: `System Preferences->Desktop & Screen Saver`
     1.  Add desktops until there are `4 desktops`
     1.  Add `~/.dotfiles/Wallpapers` as a source
