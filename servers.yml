@@ -57,7 +57,7 @@
     - nodejs
 
 - name: check restart status and restart if required
-  hosts: ubuntu
+  hosts: ubuntuservers
   remote_user: root
 
   roles:
