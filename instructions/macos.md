@@ -155,6 +155,8 @@ This stuff needs done manually.
     1.  Select the `Screensaver` tab and choose `Never`
 1. Modify some System settings
     1. Keyboard: `System Preferences->Keyboard`
+        1. `Modifier Keys...`
+            - choose `control in the select box for the `Caps Lock` key
         1. Responsive Keyboard
             - key repeat: fast
             - delay until repeat: short
@@ -199,10 +201,6 @@ This stuff needs done manually.
     1. `System Preferences->Sound` 
         - uncheck: `Show volume in menu bar`
         - may be default now
-1. Open `Karabiner-Elements`
-    - remap: `capslock` `->` `left_control`
-    - remap:
-    - remap:
 1. Manually manage the dock
     1. Items to add to the dock
         - Chrome

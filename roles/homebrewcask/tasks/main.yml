@@ -4,8 +4,8 @@
 
 # homebrew should be updated once before running this
 # inkscape requires xquartz
-- name: Install Cask Packages
-  homebrew_cask: name={{ item }} state=present update_homebrew=no
+- name: Install & Upgrade Cask Packages
+  homebrew_cask: name={{ item }} state=present update_homebrew=no upgrade_all=yes
   with_items:
     - iterm2
     - spectacle
@@ -20,7 +20,6 @@
     - steam
     - sublime-text
     - slack
-    - karabiner-elements
     - teamviewer
     - solvespace
     - openscad
@@ -42,3 +41,4 @@
     - calibre
     - playonmac
     - kindle
+
