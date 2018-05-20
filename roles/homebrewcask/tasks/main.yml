@@ -2,10 +2,13 @@
 - name: Install Cask 
   homebrew_tap: name=caskroom/cask
 
-# homebrew should be updated once before running this
+# it isn't documented but the upgraded state will install if the package isn't yet installed
+# https://github.com/ansible/ansible/blob/cdd21e2170b9a47d84624c8c2f792a66f2b0fe57/lib/ansible/modules/packaging/os/homebrew_cask.py#L570
 # inkscape requires xquartz
+# the upgrade and upgrade_all flags are currently blocking installation of individual packages, seems like a bug or minimally a big usability issue
+# homebrew should be updated once before running this - this happens in the macos.yml playbook by default
 - name: Install & Upgrade Cask Packages
-  homebrew_cask: name={{ item }} state=present update_homebrew=no upgrade_all=yes
+  homebrew_cask: name={{ item }} state=upgraded update_homebrew=no upgrade_all=no
   with_items:
     - iterm2
     - spectacle
@@ -41,4 +44,5 @@
     - calibre
     - playonmac
     - kindle
+    - controllermate
 
