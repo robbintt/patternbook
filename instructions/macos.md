@@ -137,8 +137,17 @@ This stuff needs done manually.
     - `open .`
     - in finder, doubleclick each font and choose `install font`
 1. Make home your finder default
-    - Open finder
-    - dropdown: `New finder windows show`:`<your home dir>`
+    - Open `finder -> finder preferences -> general`
+        - check: `hard disks` - show disks on desktop
+        - dropdown: `New finder windows show`:`<your home dir>`
+        - uncheck: open folders in tabs instead of new windows
+    - Open `finder -> finder preferences -> Sidebar`
+        - check: `<your home directory>`, `Pictures`, `<all things in the devices category>`
+        - uncheck: whatever you don't want to see...
+    - Open `finder -> finder preferences -> advanced`
+        - check: `show all filename extensions`, `keep folders on top when sorting by name`
+        - when performing a search: search the current folder
+
 1. Manage iterm2
     1. Make `iterm2` the default terminal
         - Open `iTerm2`, choose file->"Make iTerm2 the default terminal"
