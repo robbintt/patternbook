@@ -28,8 +28,7 @@ This installation guide begins with a mac which has already been signed out of `
     1. Top Menu => Apple Symbol => Software Update
         - If the icon is not there, go to the `App Store` and choose `Updates`
         - Update all software
-    1. Set app store preferences
-        - `System Preferences->App Store`:
+    1. Set app store preferences: `System Preferences->App Store`
         - check 'automatically check for upates'
             - uncheck: all sub-checkboxes
             - definitely do not want apple installing stuff during the work day, they are getting very sloppy
