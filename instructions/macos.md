@@ -6,7 +6,8 @@
 
 This installation guide begins with a mac which has already been signed out of `find my macbook` and all Apple services per [Apple's "How To Reinstall macOS" Guide](https://support.apple.com/en-us/HT204904)
 
-1. Boot Mac in `Internet Recovery Mode`: `Command+Option+r`
+1. Boot Mac in `Original OS Recovery Mode` which doesn't actually have a name: `Command+Option+shift+r`
+    - recovers the OS your mac shipped with
 1. `Disk Management & Encryption` - Use the Disk Utility
     1. wipe the disk
     1. create a single partition
@@ -15,6 +16,7 @@ This installation guide begins with a mac which has already been signed out of `
     1. Disk Encryption: Use unique, strong password
     1. nb: if a partition is encrypted, you can't wipe the partition table
 1. The Macbook Air 13" 2013(?) Internet Recovery installs `Mountain Lion`
+    - This is because `ctl+opt+r` is internet recovery but recovers the current OS and `ctl+opt+shift+r` is the manufacturer original OS recovery
     - When this was repeated in 2017, internet recovery installed the current OS, `Sierra`
     - However on the same day in 2017, a different laptop whose drive was repartitioned entirely installed `Mountain Lion`. It may depend on if the mac is registered to an `apple id`
     - The `Sierra`-recovery mac was definitely registered to my `apple id`
