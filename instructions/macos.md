@@ -61,12 +61,12 @@ This installation guide begins with a mac which has already been signed out of `
     - Apparently not strictly required for homebrew anymore
 1. Homebrew - used for `python->pip->ansible` toolchain & gen. pkg management
     - install via one-liner at: [https://brew.sh](https://brew.sh)
-1. `brew install python git`
+1. `brew install python2 git`
 1. Set up ssh access to github and bitbucket
     - `ssh-keygen`; Add key to bitbucket and github
     - You may also update your key from elsewhere
 1. Make: `~/virtualenvs/`
-    - `pip2 install virtualenv`
+    - `pip install virtualenv`
     - `mkdir ~/virtualenvs`
     - `git clone git@github.com:robbintt/pip.requirements`
     - `virtualenv ansible`
