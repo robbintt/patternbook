@@ -157,6 +157,7 @@ This stuff needs done manually.
     1. Keyboard: `System Preferences->Keyboard`
         1. `Modifier Keys...`
             - choose `control in the select box for the `Caps Lock` key
+            - you will need to redo this for every keyboard you install
         1. Responsive Keyboard
             - key repeat: fast
             - delay until repeat: short
