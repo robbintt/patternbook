@@ -1,6 +1,6 @@
 ---
 - name: Install Cask 
-  homebrew_tap: name=caskroom/cask
+  homebrew_tap: name=homebrew/cask
 
 # it isn't documented but the upgraded state will install if the package isn't yet installed
 # https://github.com/ansible/ansible/blob/cdd21e2170b9a47d84624c8c2f792a66f2b0fe57/lib/ansible/modules/packaging/os/homebrew_cask.py#L570
@@ -45,4 +45,5 @@
     - playonmac
     - kindle
     - controllermate
+    - phonegap
 
