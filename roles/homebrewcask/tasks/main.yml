@@ -45,5 +45,5 @@
     - playonmac
     - kindle
     - controllermate
-    - phonegap
-
+    - phonegap # install cli with node
+    - dash
