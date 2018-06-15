@@ -9,6 +9,7 @@
     - homebrew
     - homebrewcask
     - homebrewtap
+    - tmux_plugins
     - dotfiles
     - nodejs
     - pip

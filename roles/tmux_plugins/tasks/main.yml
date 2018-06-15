@@ -1,0 +1,9 @@
+- name: Deploy Tmux Plugin Manager
+  git: 
+    repo: https://github.com/tmux-plugins/tpm 
+    dest: ~/.tmux/plugins/tpm
+    update: yes 
+    recursive: yes
+    version: master
+    accept_hostkey: yes
+  remote_user: "{{ dotfilesuser }}"
