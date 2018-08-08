@@ -188,6 +188,7 @@ This stuff needs done manually.
         - Secondary click: click in bottom right corner
         - Tap to click: enable
         - Tracking speed, 6 of 10 (left to right)
+        - More Gestures: uncheck `swipe between pages`
     1. `System Preferences->Users and Groups`
         - Choose your user, select itunes and choose the - button to delete it
         - Turn middleclick on
