@@ -137,6 +137,9 @@ This stuff needs done manually.
     - `open .`
     - in finder, doubleclick each font and choose `install font`
 1. Make home your finder default
+    - Open `finder`->view
+        - select `show path bar`
+        - select `show status bar`
     - Open `finder -> finder preferences -> general`
         - check: `hard disks` - show disks on desktop
         - dropdown: `New finder windows show`:`<your home dir>`
