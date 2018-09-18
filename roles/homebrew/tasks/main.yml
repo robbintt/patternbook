@@ -60,5 +60,8 @@
     # can be used for local dev of python... when is it needed?
     - uwsgi
 
+    # this MIGHT be needed for lens correction in darktable
+    - lensfun
+
   when: ansible_os_family == 'Darwin'
 
