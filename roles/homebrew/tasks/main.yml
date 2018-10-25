@@ -51,6 +51,7 @@
     - ffmpeg
     - p7zip
     - leiningen
+    - tintin
 
     # used for rust
     - portaudio
