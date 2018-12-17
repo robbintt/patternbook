@@ -4,7 +4,8 @@
   apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
   with_items:
     - vim
-    - emacs24
+#    - emacs24
+    - emacs  # updated in ubuntu 18 at least
     - zip
     - unzip
     - dos2unix

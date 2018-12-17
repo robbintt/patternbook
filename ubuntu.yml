@@ -3,25 +3,26 @@
 
 
 - name: apply desktop configurations
-  hosts: patternbox
+  hosts: production
   become: yes
 
   roles:
-    - pip
-    - sudo
+#    - pip
+#    - sudo
     - common
-    - ubuntudesktop
-    - ubuntuchrome
-    - ubuntuxfluxgui
-    - yubico-u2frules
+    - exfat
+#    - ubuntudesktop
+#    - ubuntuchrome
+#    - ubuntuxfluxgui
+#    - yubico-u2frules
 
 
 - name: apply dotfiles to admin user
-  hosts: patternbox
+  hosts: production
 
   roles:
     - dotfiles
-    - ubuntudotfiles
+#    - ubuntudotfiles
 
 
 # this has to be done manually, it requires interactive terminal to accept a terminal oracle TOS
