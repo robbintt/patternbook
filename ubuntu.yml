@@ -8,9 +8,10 @@
 
   roles:
 #    - pip
-#    - sudo
+    - sudo
     - common
     - exfat
+    - unattended-upgrades
 #    - ubuntudesktop
 #    - ubuntuchrome
 #    - ubuntuxfluxgui
