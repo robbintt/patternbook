@@ -2,16 +2,17 @@
 # ansible dependencies are installed manually via apt, pip, and virtualenv
 
 
-- name: apply desktop configurations
+- name: apply configurations
   hosts: production
   become: yes
 
   roles:
-#    - pip
+    - pip
     - sudo
     - common
     - exfat
     - unattended-upgrades
+    - ubuntudocker
 #    - ubuntudesktop
 #    - ubuntuchrome
 #    - ubuntuxfluxgui

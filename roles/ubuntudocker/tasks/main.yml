@@ -1,0 +1,43 @@
+---
+# from: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
+
+- name: Install docker dependencies
+  vars:
+    docker_user: robbintt
+  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
+  with_items:
+    - apt-transport-https 
+    - ca-certificates 
+    - curl 
+    - software-properties-common
+
+
+- name: Add docker-maintained docker-ce ubuntu ppa apt key
+  apt_key:
+    url: "https://download.docker.com/linux/ubuntu/gpg"
+
+
+- name: Add docker-maintained docker-ce ubuntu ppa repo to sources
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+    update_cache: yes
+
+
+- name: Install docker for Ubuntu (from docker-maintained ppa)
+  vars:
+    docker_user: robbintt
+  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
+  with_items:
+    - docker-ce
+
+
+- name: Add docker group to docker user
+  vars:
+    docker_users: [ "robbintt" ]
+  user:
+    name: "{{ item }}"
+    groups: docker
+    append: yes
+  with_items:
+    - "{{ docker_users }}"
+     
