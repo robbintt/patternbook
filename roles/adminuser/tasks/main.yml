@@ -12,3 +12,4 @@
   with_file:
     - ../public_keys/key1.pub
     - ../public_keys/key2.pub
+    - ../public_keys/key3.pub
