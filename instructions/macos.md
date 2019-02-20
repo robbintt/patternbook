@@ -59,6 +59,13 @@ This installation guide begins with a mac which has already been signed out of `
 1. The user is already able to use `sudo`
 1. `Xcode Dev Tools`: Open `terminal` and type `xcode-select --install`
     - Apparently not strictly required for homebrew anymore
+    - Possible necessary high sierra steps (homebrew did prompt to install xcode)
+        1. Install xcode from app store (cli did not work)
+        1. Inside xcode choose `XCode->Open Developer Tool->More Developer Tools
+        1. login with apple and download 'Command Line Tools' for your macos AND xcode versions
+            - There is a type for each macos+xcode pair of versions
+            - e.g. "Command Line Tools (macOS 10.13) for Xcode 9.1"
+        1. You may or may not need a restart in this process. I restarted but am not sure.
 1. Homebrew - used for `python->pip->ansible` toolchain & gen. pkg management
     - install via one-liner at: [https://brew.sh](https://brew.sh)
 1. `brew install python2 git`
