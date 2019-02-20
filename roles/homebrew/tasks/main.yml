@@ -18,6 +18,8 @@
     - pwgen
     - python
     - python3
+    - pyenv
+    - pipenv
     - readline
     - rlwrap
     - sqlite
