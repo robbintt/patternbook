@@ -14,27 +14,28 @@
     - spectacle
     - flux
     - tunnelblick
-    - google-chrome
+#    - google-chrome
     - firefox
     - xquartz
     - inkscape
-    - gimp      
-    - vlc    
+    - gimp
+    - vlc
     - steam
     - sublime-text
-    - slack
+#    - slack
     - teamviewer
     - solvespace
     - openscad
-    - transmission 
+    - transmission
     - postman
     - sparkleshare
+    # need to run this once to get the cli set up
     - docker
     - java
     - macdown
     - middleclick
     - vmware-fusion
-    - virtualbox
+#    - virtualbox
     - vagrant
     - vagrant-manager
     - discord
@@ -48,3 +49,9 @@
     - dash
     - darktable
     - 1password
+    - anki
+
+    - pycharm
+    # postman alternative
+    - insomnia
+    - aerial
