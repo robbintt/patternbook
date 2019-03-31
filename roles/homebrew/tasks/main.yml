@@ -46,7 +46,7 @@
     - bash-completion2
     - nethack
     - gnupg
-    - mysql
+    - grep
     - gnu-sed
     - telnet
     - hg
