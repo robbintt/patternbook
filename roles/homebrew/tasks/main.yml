@@ -54,15 +54,13 @@
     - p7zip
     - leiningen
     - tintin
+    - jq
 
     # used for rust
     - portaudio
     - pkg-config
     - sdl2
     - nanomsg
-
-    # can be used for local dev of python... when is it needed?
-    - uwsgi
 
     # this MIGHT be needed for lens correction in darktable
     - lensfun
