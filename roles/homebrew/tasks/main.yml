@@ -54,6 +54,7 @@
     - leiningen
     - tintin
     - jq
+    - docker-compose
 
     # used for rust
     - portaudio
