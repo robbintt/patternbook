@@ -12,7 +12,6 @@
     - nodejs
     - pip
     - homebrewcask
-    - homebrewtap
 
 
 # THIS SECTION NEEDS RUN AGAIN WHENEVER macos IS UPDATED???

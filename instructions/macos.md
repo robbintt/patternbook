@@ -68,19 +68,19 @@ This installation guide begins with a mac which has already been signed out of `
         1. You may or may not need a restart in this process. I restarted but am not sure.
 1. Homebrew - used for `python->pip->ansible` toolchain & gen. pkg management
     - install via one-liner at: [https://brew.sh](https://brew.sh)
-1. `brew install python2 git`
+1. `brew install python git`
 1. Set up ssh access to github and bitbucket
     - `ssh-keygen`; Add key to bitbucket and github
     - You may also update your key from elsewhere
-1. Make: `~/virtualenvs/`
-    - `pip install virtualenv`
+1. `mkdir ~/virtualenvs/`
+    - `pip3 install virtualenv`
     - `mkdir ~/virtualenvs`
     - `git clone git@github.com:robbintt/pip.requirements`
-    - `virtualenv ansible`
-    - `. ansible/bin/activate`
+    - `virtualenv ~/virtualenvs/ansible`
+    - `. ~/virtualenvs/ansible/bin/activate`
     - `pip install ansible`
     - `ansible --version`
-1. Make: `~/monolith/`
+1. `mkdir ~/monolith/`
     - `mkdir ~/monolith/
     - `git clone git@github.com:robbintt/patternbook.git`
 1. With the `ansible virtualenv` activated, run the `macos.yml` playbook
@@ -130,9 +130,9 @@ This stuff needs done manually.
     1. uncheck: `Allow Handoff between this Mac and your iCloud devices`
 
 1. `System Preferences->Notifications`
-    1. Do this after setting up `chrome` and `messages`
+    1. Do this after setting up `iterm`, `chrome` and `messages`
     1. Select each item in the menu and choose `none` for alert style. Optionally turn off all check boxes.
-    1. Be sure to do this for `iterm` and `messages` - both are super annoying
+    1. Be sure to do this for `chrome`, `iterm`, and `messages` - all are super annoying
 
 1. Add a better local hostname `apple menu->System Preferences->Sharing`
     1. Change the "Computer Name"
@@ -164,16 +164,14 @@ This stuff needs done manually.
     1. Use a modern bash shell
         - Set BASH shell location (for homebrew bash) in `Profiles->General->Command`: `/usr/local/bin/bash`
         - Test your version: `echo $BASH_VERSION`
-        - `preferences->appearance`: uncheck "show tab close buttons"
+        - `preferences->appearance`: uncheck "tabs have close buttons"
     1. Update `iterm2` default profile
-        - Set font: `Droid Sans Mono 14`
+        - Set font: `Droid Sans Mono 15`
         - Import colors: `~/.dotfiles/.config/solarized_highcontrast_dark.itermcolors`
         - Once imported, select `solarized highcontrast dark` from the dropdown
         - `Command+Shift+.` - view hidden files in open/close/finder
         - `Command+Shift+G` - type a path in open/close/finder
         - `Preferences->Profiles->Window` - set `transparency` slider slightly above zero. 
-    1. `preferences->advanced1`
-        - `Tabs: eliminate close button` set to `Yes`
 1. Add a wallpaper: `System Preferences->Desktop & Screen Saver`
     1.  Add desktops until there are `4 desktops`
     1.  Add `~/.dotfiles/Wallpapers` as a source
@@ -201,22 +199,21 @@ This stuff needs done manually.
         - More Gestures: uncheck `swipe between pages`
     1. `System Preferences->Users and Groups`
         - Choose your user, select itunes and choose the - button to delete it
-        - Turn middleclick on
         - If you have installed steam, you must disable it from starting up here
         - turn guest user off
-        - This may be the default
+            - This is currently the default
     1. `Click battery->show percentage` (in the top bar)
     1. `System Preferences->Energy Saver`
             
         1. `Battery` tab:
             - Slider: `Turn display off after 5 minutes`
-            - Turn on: `Put hard disks to sleep when possible`
+            - Turn off: `Put hard disks to sleep when possible`
             - Turn off: `Slightly dim the display on battery power`
             - Turn off: `Enable power nap`
         1. `Power Adapter` tab:
             - Slider: `Turn display off after 20 minutes`
             - Turn off: `Prevent computer from sleeping automatically when display is off`
-            - Turn on: `Put hard disks to sleep when possible`
+            - Turn off: `Put hard disks to sleep when possible`
             - Turn off: `Wake for Wi-Fi network access`
             - Turn off: `Enable power nap`
 
@@ -228,7 +225,7 @@ This stuff needs done manually.
         - uncheck: `Automatically adjust brightness`
     1. `System Preferences->Sound` 
         - uncheck: `Show volume in menu bar`
-        - may be default now
+            - this is the default now
 1. Manually manage the dock
     1. Items to add to the dock
         - Chrome
@@ -244,17 +241,6 @@ This stuff needs done manually.
         - press the > arrow on the bottom right
             - choose `Run: as a background application`
             - Select: "do not show this message again"
-    - flux 
-        - set location
-        - choose `classic flux` colors
-        - enable 'start f.lux at login'
-    - keepassx
-        - transfer the `database` and `key` files
-        - open keepassx and test
-    - slack
-        - login to teams
-        - what teams am I even on?
-
     - tunnelblick
         - enable 'launch at login'
         - Connect: "When Tunnelblick launches"
@@ -265,7 +251,7 @@ This stuff needs done manually.
         - Turn off download offline google documents...
         - Ensure sync features are right
         - Extensions: Freshstart, uBlock Origin, cVim
-    - macdown
+    - macdown - this app is abandonware now
         - `macdown->preferences->editor`: 
             - uncheck `Auto-increment numbering in ordered lists`
             - check `insert spaces instead of tabs`
@@ -289,7 +275,7 @@ This stuff needs done manually.
     - Image Editor
     - Flycut
 1. Set up SparkleShare projects as needed
-1. Start necessary services like `postgresql` and `mysql`; maybe `emacs service` in the future
+1. Start services like `postgresql` and `mysql`; maybe `emacs service` in the future
     - Use `brew services list` to see available services.
 
 

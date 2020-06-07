@@ -36,7 +36,6 @@
     - wget
     - xonsh
     - imagemagick
-    - md5sha1sum
     - mit-scheme
     - node
     - postgresql
