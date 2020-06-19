@@ -55,6 +55,7 @@
     - tintin
     - jq
     - docker-compose
+    - awscli
 
     # used for rust
     - portaudio
