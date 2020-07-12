@@ -14,7 +14,7 @@
     - spectacle
     - flux
     - tunnelblick
-#    - google-chrome
+    - google-chrome
     - firefox
     - xquartz
     - inkscape
@@ -22,25 +22,23 @@
     - vlc
     - steam
     - sublime-text
-#    - slack
-    - teamviewer
+    - slack
+#    - teamviewer # not very safe software
+#    - virtualbox # not very safe software
     - solvespace
     - openscad
     - transmission
     - postman
     - sparkleshare
-    # need to run this once to get the cli set up
     - docker
     - java
     - macdown
     - middleclick
     - vmware-fusion
-#    - virtualbox
     - vagrant
     - vagrant-manager
     - discord
     - golly
-    - torbrowser
     - calibre
     - playonmac
     - kindle
@@ -50,8 +48,9 @@
     - darktable
     - 1password
     - anki
-
+    - zoomus
+    - signal
     - pycharm
-    # postman alternative
-    - insomnia
+    - insomnia # postman alternative
     - aerial
+    - notion

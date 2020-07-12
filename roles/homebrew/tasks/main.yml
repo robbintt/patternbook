@@ -37,7 +37,6 @@
     - wget
     - xonsh
     - imagemagick
-    - md5sha1sum
     - mit-scheme
     - node
     - yarn
@@ -48,7 +47,7 @@
     - bash-completion2
     - nethack
     - gnupg
-    - mysql
+    - grep
     - gnu-sed
     - telnet
     - hg
@@ -60,15 +59,17 @@
     - hub # github cli
     - entr
     - portaudio # used for rust
-    - pkg-config
-    - sdl2
-    - nanomsg
+    - pkg-config # used for rust
+    - sdl2 # used for rust
+    - nanomsg # used for rust
     - mplayer # anki audio dependency (or cards don't always play)
     - uwsgi # can be used for local dev of python... when is it needed?
     - lensfun # this MIGHT be needed for lens correction in darktable
     - aws-okta
     - gettext
+    - jq
     - docker-compose
+    - awscli
     - rbenv
     - terraform
     - terraform-docs

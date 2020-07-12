@@ -7,12 +7,11 @@
 
   roles:
     - homebrew
-    - homebrewcask
-    - homebrewtap
     - tmux_plugins
     - dotfiles
     - nodejs
     - pip
+    - homebrewcask
 
 
 # THIS SECTION NEEDS RUN AGAIN WHENEVER macos IS UPDATED???
