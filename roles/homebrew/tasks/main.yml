@@ -9,6 +9,7 @@
     - git-lfs
     - irssi
     - autoconf
+    - wdiff
     - colordiff
     - coreutils
     - findutils
@@ -38,6 +39,7 @@
     - imagemagick
     - mit-scheme
     - node
+    - yarn
     - postgresql
     - bash
     - lftp
@@ -53,18 +55,25 @@
     - p7zip
     - leiningen
     - tintin
+    - direnv
+    - hub # github cli
+    - entr
+    - portaudio # used for rust
+    - pkg-config # used for rust
+    - sdl2 # used for rust
+    - nanomsg # used for rust
+    - mplayer # anki audio dependency (or cards don't always play)
+    - uwsgi # can be used for local dev of python... when is it needed?
+    - lensfun # this MIGHT be needed for lens correction in darktable
+    - aws-okta
+    - gettext
     - jq
     - docker-compose
     - awscli
-
-    # used for rust
-    - portaudio
-    - pkg-config
-    - sdl2
-    - nanomsg
-
-    # this MIGHT be needed for lens correction in darktable
-    - lensfun
+    - rbenv
+    - terraform
+    - terraform-docs
+    - mas # mac app store cli: mas-cli
 
   when: ansible_os_family == 'Darwin'
 

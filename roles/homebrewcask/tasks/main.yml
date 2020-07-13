@@ -18,14 +18,16 @@
     - firefox
     - xquartz
     - inkscape
-    - gimp      
-    - vlc    
+    - gimp
+    - vlc
     - steam
     - sublime-text
     - slack
+#    - teamviewer # not very safe software
+#    - virtualbox # not very safe software
     - solvespace
     - openscad
-    - transmission 
+    - transmission
     - postman
     - sparkleshare
     - docker
@@ -45,8 +47,11 @@
     - dash
     - darktable
     - 1password
-    - zoomus
     - anki
+    - zoomus
     - signal
     - whatsapp
+    - pycharm
+    - insomnia # postman alternative
+    - aerial
     - notion
