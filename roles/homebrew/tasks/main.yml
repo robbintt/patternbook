@@ -4,7 +4,7 @@
 
 - name: install CLI tools - needs non-cli tools split off
   homebrew: name={{ item }} state=present update_homebrew=no
-  with_items:
+  loop:
     - git
     - git-lfs
     - irssi
