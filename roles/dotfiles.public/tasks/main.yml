@@ -37,5 +37,5 @@
     - { src: '~/.dotfiles/.gitconfig', dest: '~/.gitconfig' }
     - { src: '~/.dotfiles/.tmux.conf', dest: '~/.tmux.conf' }
     - { src: '~/.dotfiles/.ssh/config', dest: '~/.ssh/config' }
-    - { src: '~/.dotfiles/.irssi/', dest: '~/.irssi' }
+    #- { src: '~/.dotfiles/.irssi/', dest: '~/.irssi' }
   remote_user: "{{ dotfilesuser }}"

@@ -1,4 +1,23 @@
 ---
+# nodejs install based on https://deb.nodesource.com/setup_6.x bash script
+
+# best practice is to add the key id too
+- name: install NodeSource nodejs key
+  apt_key:
+    url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
+    state: present
+
+- name: install NodeSource nodejs ppa
+  apt_repository:
+    repo: "deb https://deb.nodesource.com/node_6.x xenial main"
+    update_cache: yes
+    state: present
+    filename: nodesource
+
+- name: Install nodejs
+  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
+  with_items:
+    - nodejs
 
 - name: Install nodejs packages for roots/sage development
   npm: 

@@ -1,60 +1,40 @@
 
 # consider moving some packages to admin user
 - name: Install Base Layer Packages
-  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
-  with_items:
-    - vim
-#    - emacs24
-    - emacs  # updated in ubuntu 18 at least
-    - zip
-    - unzip
-    - dos2unix
-    - git
-    - tree
-    - ranger
-    - lftp
-    - tmux
-    - irssi
-    - pwgen
-    - fail2ban
-    - aptitude
-    - nmap
-    - traceroute
-    - mtr
-    - postfix
-    - python-pip
-    - curl
-    - iftop
-    - vnstat
-    - htop
-    - ghostscript
-    - debootstrap
-    - python3-dev
-    - sqlite3
-    - nethack-console
+  apt: 
+    update_cache: yes 
+    cache_valid_time: 3600
+    state: present
+    autoclean: yes
+    name:
+      - vim
+      - emacs
+      - zip
+      - unzip
+      - dos2unix
+      - git
+      - tree
+      - ranger
+      - lftp
+      - tmux
+      - irssi
+      - pwgen
+      - fail2ban
+      - aptitude
+      - nmap
+      - traceroute
+      - mtr
+      - postfix
+      - curl
+      - iftop
+      - vnstat
+      - htop
+      - ghostscript
+      - debootstrap
+      - python3-dev
+      - sqlite3
+      - nethack-console
 
 # This Ansible apt task requires `aptitude`
 - name: Perform Safe Upgrade
   apt: upgrade=safe update_cache=yes cache_valid_time=3600 autoremove=yes
-
-
-
-# nodejs install based on https://deb.nodesource.com/setup_6.x bash script
-
-# best practice is to add the key id too
-- name: install NodeSource nodejs key
-  apt_key:
-    url: "https://deb.nodesource.com/gpgkey/nodesource.gpg.key"
-    state: present
-
-- name: install NodeSource nodejs ppa
-  apt_repository:
-    repo: "deb https://deb.nodesource.com/node_6.x xenial main"
-    update_cache: yes
-    state: present
-    filename: nodesource
-
-- name: Install nodejs
-  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
-  with_items:
-    - nodejs

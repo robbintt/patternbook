@@ -3,27 +3,25 @@
 
 
 - name: apply configurations
-  hosts: production
+  hosts: local 
   become: yes
 
   roles:
-    - pip
-    - sudo
     - common
+    - sudo
     - exfat
-    - unattended-upgrades
-    - ubuntudocker
-#    - ubuntudesktop
+    - ubuntudesktop
+#    - ubuntudocker
 #    - ubuntuchrome
 #    - yubico-u2frules
 
 
 - name: apply dotfiles to admin user
-  hosts: production
+  hosts: local
 
   roles:
     - dotfiles
-#    - ubuntudotfiles
+    - ubuntudotfiles
 
 
 # this has to be done manually, it requires interactive terminal to accept a terminal oracle TOS
