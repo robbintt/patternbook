@@ -34,6 +34,7 @@
       - python3-dev
       - sqlite3
       - nethack-console
+      - openssh-server
 
 # This Ansible apt task requires `aptitude`
 - name: Perform Safe Upgrade

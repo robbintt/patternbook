@@ -1,9 +1,12 @@
 
 - name: install unattended upgrades
-  apt: name={{ item }} state=installed update_cache=yes cache_valid_time=3600
-  with_items:
-    - unattended-upgrades
-    - update-notifier-common
+  apt:
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+    name:
+      - unattended-upgrades
+      - update-notifier-common
 
 - name: Deploy unattended-upgrades configuration - auto reboot off
   vars:

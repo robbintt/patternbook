@@ -3,7 +3,7 @@
 
 
 - name: apply configurations
-  hosts: local 
+  hosts: local
   become: yes
 
   roles:
@@ -11,6 +11,8 @@
     - sudo
     - exfat
     - ubuntudesktop
+    - unattended-upgrades
+    - sshdconfig
 #    - ubuntudocker
 #    - ubuntuchrome
 #    - yubico-u2frules
