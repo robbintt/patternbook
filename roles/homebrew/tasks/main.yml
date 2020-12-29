@@ -13,6 +13,7 @@
     - colordiff
     - coreutils
     - findutils
+    - rsync
     - dos2unix
     - curl
     - flashrom
