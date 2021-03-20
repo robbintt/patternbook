@@ -29,7 +29,7 @@
     - watch
     - tree
     - ranger
-    - unrar
+    #- unrar # removed due to licensing, apparently.
     - htop
     - vim
     - emacs
@@ -75,6 +75,9 @@
     - terraform
     - terraform-docs
     - mas # mac app store cli: mas-cli
+    - bazel
+    - adoptopenjdk
+    - maven
 
   when: ansible_os_family == 'Darwin'
 

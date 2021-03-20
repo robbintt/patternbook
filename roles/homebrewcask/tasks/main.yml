@@ -31,7 +31,7 @@
     - postman
     - sparkleshare
     - docker
-    - java
+    #- java
     - macdown
     - middleclick
     - vmware-fusion
