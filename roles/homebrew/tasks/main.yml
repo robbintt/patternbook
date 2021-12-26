@@ -78,6 +78,7 @@
     - bazel
     - adoptopenjdk
     - maven
+    - packer
 
   when: ansible_os_family == 'Darwin'
 
