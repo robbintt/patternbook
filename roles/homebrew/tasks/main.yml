@@ -76,8 +76,9 @@
     - terraform-docs
     - mas # mac app store cli: mas-cli
     - bazel
-    - adoptopenjdk
+    #- adoptopenjdk # replaced by temurin cask
     - maven
+    - alfred
 
   when: ansible_os_family == 'Darwin'
 
