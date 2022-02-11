@@ -79,6 +79,7 @@
     #- adoptopenjdk # replaced by temurin cask
     - maven
     - alfred
+    - packer
 
   when: ansible_os_family == 'Darwin'
 

@@ -12,7 +12,7 @@
   with_items:
     - iterm2
     - spectacle
-    - flux
+    #- flux # replaced by night shift 4:00 AM to 3:59 AM
     - tunnelblick
     - google-chrome
     - firefox
