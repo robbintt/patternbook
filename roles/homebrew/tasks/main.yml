@@ -80,7 +80,7 @@
     - maven
     - alfred
     - packer
-    - mactex # used for latexmk tex compiler, as of may 2022, basictex does not have latexmk binary
+    - mactex # used for latexmk tex compiler with vim-tex, as of may 2022, basictex does not have latexmk binary, there is also a mactex-no-gui that may be significantly smaller
+    - skim # pdf viewer for vim-tex
 
   when: ansible_os_family == 'Darwin'
-
