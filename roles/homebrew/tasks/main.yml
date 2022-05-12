@@ -80,6 +80,7 @@
     - maven
     - alfred
     - packer
+    - mactex # used for latexmk tex compiler, as of may 2022, basictex does not have latexmk binary
 
   when: ansible_os_family == 'Darwin'
 
