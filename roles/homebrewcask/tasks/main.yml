@@ -41,6 +41,7 @@
     - calibre
     - playonmac
     - kindle
+    - send-to-kindle
     - controllermate
     - phonegap # install cli with node
     - dash
