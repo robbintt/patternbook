@@ -57,3 +57,4 @@
     - notion
     - visual-studio-code
     - temurin
+    - notunes # block itunes/apple music from starting with headphones
