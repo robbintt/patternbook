@@ -12,7 +12,7 @@
   with_items:
     - iterm2
     - spectacle
-    - flux
+    #- flux # replaced by night shift 4:00 AM to 3:59 AM
     - tunnelblick
     - google-chrome
     - firefox
@@ -21,7 +21,6 @@
     - gimp
     - vlc
     - steam
-    - sublime-text
     - slack
 #    - teamviewer # not very safe software
 #    - virtualbox # not very safe software
@@ -42,13 +41,14 @@
     - calibre
     - playonmac
     - kindle
+    - send-to-kindle
     - controllermate
     - phonegap # install cli with node
     - dash
     - darktable
     - 1password
     - anki
-    - zoomus
+    - zoom
     - signal
     - whatsapp
     - pycharm
@@ -56,3 +56,5 @@
     - aerial
     - notion
     - visual-studio-code
+    - temurin
+    - notunes # block itunes/apple music from starting with headphones
