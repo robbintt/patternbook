@@ -1,32 +1,23 @@
 ---
-# if you are installing locally, this will install the dotfiles to your local directory
-# remotely this works fine... this is probably WONTFIX because it's a pretty special case
-# file stored in vault
-- name: Add Dotfiles SSH Deploy Keys
-  copy:
-    src: "private_repo_deploy_key"
-    dest: "~/.ssh/private_repo_deploy_key"
-    mode: 0600
-  remote_user: "{{ dotfilesuser }}"
-
-- set_fact:
-    dotfiles_branch: "master"
-
-# this recursively deploys the `private` repository as well
-# NB: This deploy key must be on both dotfiles and any recursive subrepositories because
-# it is used for auth to dotfiles as well.
-# need to regenerate the public key and put on github private repo because it is no longer on bitbucket
 - name: Deploy Dotfiles, based on OS, to Specified Users
   git:
     repo: git@github.com:robbintt/dotfiles.git
     dest: ~/.dotfiles
-    key_file: ~/.ssh/private_repo_deploy_key
     update: yes
-    recursive: yes
+    recursive: no
     version: master
     accept_hostkey: yes
   remote_user: "{{ dotfilesuser }}"
 
+- name: Generate dotfiles directories
+  file:
+    state: directory
+    mode: 0775
+    path: "{{ item }}"
+  with_items:
+    - "~/.vim"
+    - "~/.vim/undodir"
+  remote_user: "{{ dotfilesuser }}"
 
 - name: Force symlinks
   file:
@@ -50,4 +41,5 @@
     - { src: '~/.dotfiles/.tmux.conf', dest: '~/.tmux.conf' }
     - { src: '~/.dotfiles/.ssh/config', dest: '~/.ssh/config' }
     - { src: '~/.dotfiles/.irssi/', dest: '~/.irssi' }
+    - { src: '~/.dotfiles/private/configs/.envvars', dest: '~/.envvars' }
   remote_user: "{{ dotfilesuser }}"

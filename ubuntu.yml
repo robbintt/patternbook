@@ -33,7 +33,7 @@
   hosts: production
 
   roles:
-#    - dotfiles
+    - dotfiles
 #    - ubuntudotfiles
 
 
