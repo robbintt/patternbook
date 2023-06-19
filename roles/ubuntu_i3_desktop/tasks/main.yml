@@ -14,9 +14,6 @@
       - gimp
       # it is unclear if sparkleshare has any unmet dependencies from the mess below
       #- sparkleshare
-      # for ubuntu exfat mounting
-      - exfat-fuse
-      - exfat-utils
       - chromium-browser
       - xfce4-terminal
       - xdg-utils
