@@ -12,11 +12,9 @@
 #    - raw: if [ 1 -gt $(grep -c 'install ok installed' <<< `dpkg -s python-apt`) ]; then apt-get update; apt-get -y install python-simplejson python-apt; fi;
 ### End Ansible Dependencies
 
-
 - name: apply configurations
   hosts: production
   become: yes
-
   roles:
     - pip
     - sudo
@@ -28,19 +26,13 @@
 #    - ubuntuchrome
 #    - yubico-u2frules
 
-
 - name: apply dotfiles to admin user
   hosts: production
-
   roles:
     - dotfiles
 #    - ubuntudotfiles
 
-
-# this has to be done manually, it requires interactive terminal to accept a terminal oracle TOS
-#- name: install oracle java 8
-#  hosts: patternbox
-#  become: yes
-#
-#  roles:
-#    - ubuntuoraclejava
+- name: install pyenv to admin user
+  hosts: production
+  roles:
+    - pyenv

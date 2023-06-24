@@ -1,0 +1,7 @@
+# pyenv path already in dotfiles
+- name: Install PyEnv with git
+  ansible.builtin.git:
+    repo: 'https://github.com/pyenv/pyenv.git'
+    dest: ~/.pyenv
+    update: no
+  remote_user: "{{ dotfilesuser }}"
