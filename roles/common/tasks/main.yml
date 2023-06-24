@@ -1,8 +1,8 @@
 
 # consider moving some packages to admin user
 - name: Install Base Layer Packages
-  apt: 
-    update_cache: yes 
+  apt:
+    update_cache: yes
     cache_valid_time: 3600
     state: present
     autoclean: yes
@@ -36,6 +36,9 @@
       - nethack-console
       - openssh-server
       - clang
+      - libbz2-dev
+      - liblzma-dev
+      - tk-dev
 
 # This Ansible apt task requires `aptitude`
 - name: Perform Safe Upgrade
