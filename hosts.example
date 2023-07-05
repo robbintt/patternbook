@@ -11,6 +11,9 @@ a.b.c.d
 a.b.c.d
 
 # localhost aliases
+[localhost]
+localhost
+
 [macosx]
 localhost
 
@@ -18,6 +21,9 @@ localhost
 localhost
 
 [pine64]
+localhost
+
+[stardart]
 localhost
 
 
