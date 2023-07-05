@@ -1,0 +1,17 @@
+   ---
+   - name: Create WoL script
+     template:
+       src: "enable-wol.sh.j2"
+       dest: "/usr/local/bin/enable-wol.sh"
+       mode: 0755
+
+   - name: Create systemd service for WoL script
+     template:
+       src: "enable-wol.service.j2"
+       dest: "/etc/systemd/system/enable-wol.service"
+
+   - name: Enable and start service
+     systemd:
+       name: enable-wol
+       enabled: yes
+       state: started

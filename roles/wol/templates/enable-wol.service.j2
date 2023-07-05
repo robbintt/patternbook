@@ -1,0 +1,8 @@
+[Unit]
+Description=Enable Wake-on-LAN
+
+[Service]
+ExecStart=/usr/local/bin/enable-wol.sh
+
+[Install]
+WantedBy=multi-user.target
