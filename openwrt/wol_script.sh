@@ -20,14 +20,14 @@
 
 case "$1" in
     start)
-        # The following are required:
         # Wake-on-LAN command
-        etherwake -i ${LOCAL_IFACE:?} ${MAC_ADDR:?}
+        sudo etherwake -i ${LOCAL_IFACE:?} ${MAC_ADDR:?}
 
         ;;
     stop)
-        # suspend system, TODO fix to not use sudo
+        # suspend system
         # for now this is not in use
+        # TODO fix to not use sudo
         ssh ${REMOTE_USER:?}@${HOST:?} "sudo systemctl suspend"
         ;;
     *)
