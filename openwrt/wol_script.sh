@@ -8,23 +8,26 @@
 # invoke as follows
 # - `MAC_ADDR=<macaddr> wol_script start`
 # - `REMOTE_USER=<username> HOST=<ip> wol_script stop`
-# assume:
-# - ethtool on host
+# assume for wake:
 # - etherwake on openwrt `opkg update && opkg install etherwake`
+# - ethtool enabled on host, host configured to 'wake on lan'
+# - WoL enabled in target bios
+# assume for suspend:
+# - client has passwordless sudo and passwordless ssh on host, or REMOTE_USER is root
 # - systemctl suspend works
-# - WoL enabled in bios
-# - $REMOTE_USER has power management and ethtool
+# - $REMOTE_USER has power management, same ethtool
 
 
 case "$1" in
     start)
         # The following are required:
         # Wake-on-LAN command
-        etherwake ${MAC_ADDR:?}
+        etherwake -i ${LOCAL_IFACE:?} ${MAC_ADDR:?}
 
         ;;
     stop)
-        # suspend system
+        # suspend system, TODO fix to not use sudo
+        # for now this is not in use
         ssh ${REMOTE_USER:?}@${HOST:?} "sudo systemctl suspend"
         ;;
     *)
