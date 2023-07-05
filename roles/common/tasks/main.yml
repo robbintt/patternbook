@@ -39,6 +39,7 @@
       - libbz2-dev
       - liblzma-dev
       - tk-dev
+      - etherwake
 
 # This Ansible apt task requires `aptitude`
 - name: Perform Safe Upgrade
