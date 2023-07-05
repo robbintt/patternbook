@@ -16,9 +16,9 @@
   hosts: stardart
   become: yes
   roles:
+    - pip
+    - sudo
     - wol
-#    - pip
-#    - sudo
 #    - common
 #    - exfat
 #    - unattended-upgrades
