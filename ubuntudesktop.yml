@@ -15,9 +15,6 @@
 - name: apply configurations
   hosts: production
   become: yes
-  vars:
-    # would rather have these in inventory
-    eth_device: enp5s0
   roles:
     - wol
 #    - pip
