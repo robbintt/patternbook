@@ -26,6 +26,10 @@ localhost
 [stardart]
 localhost
 
+# pass variables like this
+[hosts]
+hostname eth_device=eth0
+
 
 # groups defined below in terms of aliases
 [ubuntuservers:children]
