@@ -1,0 +1,38 @@
+
+# consider moving some packages to admin user
+- name: Install Base Layer Packages
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+    state: present
+    autoclean: yes
+    name:
+      - vim
+      - emacs
+      - zip
+      - unzip
+      - git
+      - tree
+      - ranger
+      - tmux
+      - pwgen
+      - aptitude
+      - nmap
+      - traceroute
+      - mtr
+      - postfix
+      - curl
+      - iftop
+      - vnstat
+      - htop
+      - sqlite3
+      - nethack-console
+      - clang
+      - libbz2-dev
+      - liblzma-dev
+      - tk-dev
+
+# This Ansible apt task requires `aptitude`
+# dies because of customized cloud init stuff
+- name: Perform Safe Upgrade
+  apt: upgrade=safe update_cache=yes cache_valid_time=3600 autoremove=yes
