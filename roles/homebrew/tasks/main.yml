@@ -69,6 +69,7 @@
     - aws-okta
     - gettext
     - jq
+    - yq
     - docker-compose
     - awscli
     - rbenv
