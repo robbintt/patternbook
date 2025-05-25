@@ -11,6 +11,9 @@ a.b.c.d
 a.b.c.d
 
 # localhost aliases
+[localhost]
+localhost
+
 [macosx]
 localhost
 
@@ -19,6 +22,13 @@ localhost
 
 [pine64]
 localhost
+
+[stardart]
+localhost
+
+# pass variables like this
+[hosts]
+hostname eth_device=eth0
 
 
 # groups defined below in terms of aliases

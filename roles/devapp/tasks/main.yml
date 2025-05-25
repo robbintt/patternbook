@@ -11,15 +11,11 @@
       - emacs
       - zip
       - unzip
-      - dos2unix
       - git
       - tree
       - ranger
-      - lftp
       - tmux
-      - irssi
       - pwgen
-      - fail2ban
       - aptitude
       - nmap
       - traceroute
@@ -29,19 +25,14 @@
       - iftop
       - vnstat
       - htop
-      - ghostscript
-      - debootstrap
-      - python3-dev
       - sqlite3
       - nethack-console
-      - openssh-server
       - clang
       - libbz2-dev
       - liblzma-dev
       - tk-dev
-      - etherwake
-      - nfs-common
 
 # This Ansible apt task requires `aptitude`
+# dies because of customized cloud init stuff
 - name: Perform Safe Upgrade
   apt: upgrade=safe update_cache=yes cache_valid_time=3600 autoremove=yes

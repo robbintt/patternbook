@@ -3,7 +3,7 @@
 
 ### Begin Ansible Dependencies
 # Ansible needs some dependencies: http://docs.ansible.com/ansible/intro_installation.html
-# Detect if the client has python-apt. If not, install all listed dependencies.  
+# Detect if the client has python-apt. If not, install all listed dependencies.
 #- name: Install Ansible Dependencies
 #  hosts: ubuntuservers
 #  remote_user: root
@@ -13,14 +13,15 @@
 ### End Ansible Dependencies
 
 - name: apply configurations
-  hosts: production
+  hosts: stardart
   become: yes
   roles:
     - pip
     - sudo
-    - common
-    - exfat
-    - unattended-upgrades
+    - wol
+#    - common
+#    - exfat
+#    - unattended-upgrades
 #    - ubuntudocker
 #    - ubuntudesktop
 #    - ubuntuchrome
@@ -29,10 +30,10 @@
 - name: apply dotfiles to admin user
   hosts: production
   roles:
-    - dotfiles
+#    - dotfiles
 #    - ubuntudotfiles
 
 - name: install pyenv to admin user
   hosts: production
   roles:
-    - pyenv
+#    - pyenv

@@ -7,9 +7,10 @@
 
   roles:
     - homebrew
+    - pip
     - tmux_plugins
     - dotfiles
-    - pip
+    - pyenv
     - homebrewcask
 
 

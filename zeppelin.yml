@@ -22,7 +22,7 @@
     - pip
     - sudo
     - adminuser
-    - dotfiles.public
+    - dotfiles
     - swapfile
     - journalctl
     - unattended-upgrades

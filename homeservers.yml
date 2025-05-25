@@ -3,7 +3,7 @@
 
 ### Begin Ansible Dependencies
 # Ansible needs some dependencies: http://docs.ansible.com/ansible/intro_installation.html
-# Detect if the client has python-apt. If not, install all listed dependencies.  
+# Detect if the client has python-apt. If not, install all listed dependencies.
 #- name: Install Ansible Dependencies
 #  hosts: ubuntuservers
 #  remote_user: root
@@ -13,26 +13,23 @@
 ### End Ansible Dependencies
 
 - name: apply configurations
-  hosts: production
+  hosts: homeservers
   become: yes
   roles:
+#    - sudo # not working for some reason, deal with later
     - pip
-    - sudo
-    - common
-    - exfat
-    - unattended-upgrades
+    - wol
+#    - common
+#    - unattended-upgrades
 #    - ubuntudocker
-#    - ubuntudesktop
-#    - ubuntuchrome
-#    - yubico-u2frules
 
 - name: apply dotfiles to admin user
-  hosts: production
+  hosts: homeservers
   roles:
-    - dotfiles
+#    - dotfiles
 #    - ubuntudotfiles
 
 - name: install pyenv to admin user
-  hosts: production
+  hosts: homeservers 
   roles:
-    - pyenv
+#    - pyenv

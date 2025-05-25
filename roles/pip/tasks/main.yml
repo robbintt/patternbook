@@ -5,6 +5,3 @@
   with_items:
     - pip
     - virtualenv
-
-
-
