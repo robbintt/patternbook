@@ -85,5 +85,6 @@
     - skim # pdf viewer for vim-tex
     - asdf
     - xcodes
+    - aria2 # faster xcodes downloads
 
   when: ansible_os_family == 'Darwin'
