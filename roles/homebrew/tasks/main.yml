@@ -88,5 +88,6 @@
     - aria2 # faster xcodes downloads
     - kubectl
     - helm
+    - colima
 
   when: ansible_os_family == 'Darwin'
