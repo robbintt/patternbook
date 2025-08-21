@@ -89,5 +89,8 @@
     - kubectl
     - helm
     - colima
+    - rectangle
+    - iterm2
+    - 1password
 
   when: ansible_os_family == 'Darwin'
