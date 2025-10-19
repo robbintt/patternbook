@@ -41,6 +41,9 @@
       - tk-dev
       - etherwake
       - nfs-common
+      - samba
+      - wireguard
+      - xclip
 
 # This Ansible apt task requires `aptitude`
 - name: Perform Safe Upgrade
