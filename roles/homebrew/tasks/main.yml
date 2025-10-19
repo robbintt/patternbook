@@ -20,7 +20,6 @@
     - pwgen
     - python
     - python3
-    - pyenv
     - pipenv
     - readline
     - rlwrap
@@ -92,5 +91,12 @@
     - rectangle
     - iterm2
     - 1password
+    - pandoc # aider playwright dep
+    - mise # intended to replace pyenv rbenv in the long term, and nvm
+    - rbenv
+    - pyenv
+    - alt-tab
+    - ghostty
+    - karabiner-elements
 
   when: ansible_os_family == 'Darwin'
