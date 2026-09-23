@@ -5,13 +5,16 @@
   hosts: macosx
 #  remote_user: root
 
+# commented cask until i can get through it
+# dotfiles is manually deployed as of sept 2026
+# this stuff is going to go to the agents, so don't spend time yet
   roles:
     - homebrew
-    - pip
     - tmux_plugins
-    - dotfiles
-    - pyenv
-    - homebrewcask
+#    - homebrewcask # haven't gone through this since cask was consolidated a lot
+#    - dotfiles
+#    - pyenv
+#    - pip
 
 
 # THIS SECTION NEEDS RUN AGAIN WHENEVER macos IS UPDATED???

@@ -1,4 +1,5 @@
 # FUTURE: default directory ~/virtualenvs/ and my regular virtualenvs should be maintained here
+# TODO: this is slightly less bootstrappy because manual bootstrap is much easier with builtin venv python3 -m venv ~/virtualenvs/ansible; . ~/virtualenvs/ansible/bin/activate; pip install ansible
 
 - name: Install Python Packages - may fail if .bashrc has PIP_REQUIRE_VIRTUALENV set to true
   pip: name={{ item }}
