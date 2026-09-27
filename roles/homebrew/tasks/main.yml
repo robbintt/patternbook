@@ -20,6 +20,7 @@
     - coreutils
     - gnupg
     - grep
+    - rg
     - gnu-sed
     - findutils
     - rsync
@@ -37,6 +38,7 @@
     - htop
     - vim
     - emacs
+    - glow
     - vnstat
     - iftop
     - wget
