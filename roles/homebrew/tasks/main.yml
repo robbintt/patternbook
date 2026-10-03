@@ -69,6 +69,8 @@
     - nanomsg # used for rust
     - gh # github cli
     - nethack
+    - sf-symbols
+    - brave
     #- tintin
     #- skim # pdf viewer for vim-tex
     #- hg
